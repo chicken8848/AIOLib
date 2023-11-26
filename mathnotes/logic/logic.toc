@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {1}Propositions}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Proposition definition}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Negation of a proposition}{2}{}%
+\contentsline {subsection}{\numberline {1.3}Conjunction of propositions}{3}{}%
+\contentsline {subsection}{\numberline {1.4}Disjunction of propositions}{3}{}%
+\contentsline {subsection}{\numberline {1.5}Exclusive or}{3}{}%
+\contentsline {subsection}{\numberline {1.6}Conditional Statements}{3}{}%
+\contentsline {subsection}{\numberline {1.7}Converse, contrapositive, inverse}{4}{}%
+\contentsline {subsection}{\numberline {1.8}Biconditionals}{5}{}%
+\contentsline {subsection}{\numberline {1.9}Precedence of Logical Operators}{5}{}%
+\contentsline {section}{\numberline {2}Propositional Equivalences}{5}{}%
+\contentsline {subsection}{\numberline {2.1}Logical Equivalences}{6}{}%
+\contentsline {subsection}{\numberline {2.2}Constructing New Logical Equivalences}{7}{}%
+\contentsline {section}{\numberline {3}Predicates and Quantifiers}{7}{}%
+\contentsline {subsection}{\numberline {3.1}Predicates}{8}{}%
+\contentsline {subsection}{\numberline {3.2}Quantifiers}{8}{}%
+\contentsline {subsection}{\numberline {3.3}Binding Variables}{9}{}%
+\contentsline {subsection}{\numberline {3.4}Logical Equivalences Involving Quantifiers}{9}{}%
+\contentsline {subsection}{\numberline {3.5}Negating Quantified Expressions}{10}{}%
+\contentsline {subsection}{\numberline {3.6}Propositional Satisfiability}{10}{}%
+\contentsline {subsection}{\numberline {3.7}An Application to Satisfiability}{11}{}%
+\contentsline {section}{\numberline {4}Additional Exercises}{12}{}%
