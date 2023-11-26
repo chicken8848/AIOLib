@@ -1,4 +1,4 @@
-# funnylibrary
+# All-In-One Collection of my library
 
 A library of stuff I have compiled for myself
 
