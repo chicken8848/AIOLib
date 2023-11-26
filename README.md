@@ -1,5 +1,11 @@
 # funnylibrary
+
 A collection of functions I have created for myself
+
+## Math Notes
+
+- Complex Numbers
+- Intro to Mathematical Logic
 
 ## python library
 
