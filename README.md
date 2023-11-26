@@ -7,12 +7,12 @@ A collection of functions I have created for myself
 - Complex Numbers
 - Intro to Mathematical Logic
 
-## python library
+## Python Library
 
-### compare\_functions()
+### compare_functions.py
 
-takes two functions and compares their outputs with respect to a array of arguments
+- compare_functions(): Takes two functions and compares their outputs with respect to an array of arguments.
 
-### sorting\_test()
+### sorting_test.py
 
-takes a sorting algorithm and compares it to the python sorted() function
+- sorting_test(): takes a sorting algorithm and compares it to the python sorted() function.
