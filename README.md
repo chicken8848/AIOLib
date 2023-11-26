@@ -1,4 +1,4 @@
-# All-In-One Collection of my library
+# All-In-One Collection of My Library
 
 A library of stuff I have compiled for myself
 
