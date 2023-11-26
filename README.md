@@ -1,6 +1,6 @@
 # funnylibrary
 
-A collection of functions I have created for myself
+A library of stuff I have compiled for myself
 
 ## Math Notes
 
