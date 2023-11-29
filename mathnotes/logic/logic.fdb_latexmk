@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1701095225 "logic.tex" "logic.pdf" "logic" 1701095225 0
+["pdflatex"] 1701239206 "logic.tex" "logic.pdf" "logic" 1701239207 0
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1689853683 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc" 1689853683 3341 78e600b269762aa2a25a5293cc4535c0 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc" 1689853683 3275 8d7166dfdbc31ffdc8aba0c31b3bd5c8 ""
@@ -105,9 +105,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1692970188 4482925 a1a254cacf5c7108f7b28226c8f3b19f ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1699895922 6768061 ce4d83b6002faba598e77c06e2baceda ""
-  "logic.aux" 1701095225 2588 09cdb3d894b060488034bbfc826421e8 "pdflatex"
-  "logic.tex" 1701095224 26480 500067d3d121291b1f2928e360160558 ""
-  "logic.toc" 1701095225 1653 1881773011f41fdd4af049a68496c856 "pdflatex"
+  "logic.aux" 1701239207 2588 09cdb3d894b060488034bbfc826421e8 "pdflatex"
+  "logic.tex" 1701239205 27508 67e0bc8303198cabbb4ab4bad2882257 ""
+  "logic.toc" 1701239207 1653 1881773011f41fdd4af049a68496c856 "pdflatex"
   (generated)
   "logic.aux"
   "logic.log"

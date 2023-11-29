@@ -1,0 +1,268 @@
+\documentclass{article}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\title{DES Notes for the final in week 12}
+\author{Joshua John Lee Shi Kai}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section*{Introduction}
+
+\begin{enumerate}
+	\item Energy source
+	      \begin{itemize}
+		      \item Sun
+	      \end{itemize}
+	\item Solar Panel
+	      \begin{itemize}
+		      \item Parameters
+		      \item Sizing
+	      \end{itemize}
+	\item Solar Charge Controller
+	\item Battery
+	      \begin{itemize}
+		      \item Parameters
+		      \item Type
+		      \item Sizing
+	      \end{itemize}
+	\item LED
+	      \begin{itemize}
+		      \item Load
+	      \end{itemize}
+\end{enumerate}
+
+\section{Week 6}
+\subsection{Solar Radiation Spectrum}
+The sun emits EM radiation across most of the electromagnetic spectrum.
+\begin{itemize}
+	\item \textbf{Spectral irradiance} is the irradiance of a \textit{surface}
+	      at a given wavelength.
+	\item \textbf{Irradiance} is the power received per unit area
+\end{itemize}
+Irradiance is a measure of solar power per unit area at any moment
+in time. Measured in $W/m^2$ \\
+Irradiation ($Wh/m^2$) is the total amount of solar energy per unit
+are received over a given period.\\
+Peak sun hour is equivalent to the total irradiation
+received at the site during the day. 1 peak sun hour is equivalent to
+$1kWh/m^2$
+
+\subsection{Solar Irradiance Variation}
+Solar irradiation variation depends on location on globe and the position
+of sun throughout.
+Here are some considerations for the Energy/Power available for
+collection:
+\begin{enumerate}
+	\item Weather and climate
+	\item Tilt angle and orientation
+	\item Shadowing due to surrounding buildings, vegetation
+\end{enumerate}
+\subsection{Solar Module}
+Solar irradiation proveds energy in the form of a photon. The solar module
+(photvoltaic panel, solar panel) absorbed the photon to produce electron
+hole pair that conduct electricity.
+\subsubsection{Formation of Electron-Hole Pairs with Solar Energy}
+Semiconductors (p and n) have a bandgap $< ~5eV$. \\
+Attaching a piece of silicon to a circuit will not make current flow
+however, because the electrons in the conduction band will move in to
+occupy vacant sites in the valance band. We have to create a driving
+force. A driving force has to be present to move the electrons created
+out of the semiconductor.
+\subsubsection{Putting p-n doped semicon together}
+\begin{center}
+	\begin{tabular}[c]{l|l|l}
+		\hline
+		                     & p-doped   & n-doped   \\
+		\hline
+		Major charge carrier & holes     & electrons \\
+		Minor charge carrier & electrons & holes     \\
+		Overall charge       & Neutral   & Neutral   \\
+
+		\hline
+	\end{tabular}
+\end{center}
+\subsubsection{Formation of $+$ and $-$ Terminals (Driving Force)}
+So when put together, the electrons will move from n to p leaving behind
+the $+$ ion and creating $-$ ion. So when there is photon with energy $>$
+the bandgap. The electron will move from $p \rightarrow n$ junction.
+Resulting in current. This current is called \textbf{photocurrent} $I_{sc}$.
+
+\section{Week 8}
+\subsubsection{Current in a p-n junction}
+Electric field goes from $n \rightarrow p$. $I_{D}$ or \textbf{drift current}
+goes in the opposite direction to the electric field. and can be modelled as
+\begin{equation}
+	I_{D} = I_{o}(e^{\frac{qV}{k_{B}T}}-1)
+\end{equation}
+Where:
+\begin{itemize}
+	\item $I_o$: Reverse saturation current
+	\item $q$: charge of an electron
+	\item $k_{B}$: Boltzmann constant
+	\item $T$: Temperature in Kelvin
+\end{itemize}
+\begin{center}
+	\begin{tabular}{l|l|l}
+		Name                 & Symbol    & Description                                           \\
+		\hline
+		Photocurrent         & $I_{sc}$  & Current during a short circuit when the resistance is \\
+		                     &           & zero. Maximum current output of the PV cell.          \\
+		\hline
+		Open-circuit voltage & $V_{oc}$  & Voltage during an open circuit when resistance is at  \\
+		                     &           & maximum. Maximum voltage output of the PV cell.       \\
+		\hline
+		Maximum power        & $P_{max}$ & Maximum power output of the PV cell.                  \\
+		\hline
+		Maximum power point  & MPP       & The point on the I-V curve at which the PV cell will  \\
+		                     &           & generate the most power                               \\
+		\hline
+		Voltage at MPP       & $V_{mp}$  & The PV cell voltage at MPP                            \\
+		\hline
+		Current at MPP       & $I_{mp}$  & The PV cell current at MPP                            \\
+		\hline
+	\end{tabular}
+\end{center}
+\subsubsection{Photocurrent}
+The effect of the illumination of light is the development of photogenerated
+carriers(electron-hole) pair. The electric field causes the photegenerated
+carries to flow
+\begin{itemize}
+	\item Electrons to the n
+	\item Holes to the p
+\end{itemize}
+The photocurrent produced is in the opposite direction of $I_{D}$. \\
+Well then the ouput current is simply
+\begin{align}
+	I & = I_{D} - I_{sc}                                        \\
+	  & \Rightarrow I = I_{o}(e^{\frac{qV}{k_{B}T}}-1) - I_{sc}
+\end{align}
+When the solar cell is in operation, $I_{sc} > I_{o}(e^{\frac{qV}{k_{B}T}}-1)$
+and current flows from the p terminal. \\
+The equation for the IV plot can be written as follows
+\begin{equation}
+	I_{r} = I_{sc} - I_{o}(e^{\frac{qV}{k_{B}T}}-1)
+\end{equation}
+\subsubsection{Open Circuit Voltage}
+If the terminals of the solar cells are not connected, no current flows.
+The voltage that develops across the device is called the open circuit
+voltage $V = V_{oc}$
+\begin{equation}
+	V_{oc} = \frac{k_{B}T}{q}ln(\frac{I_{sc}}{I_o}+1)
+\end{equation}
+\subsubsection{Output Power}
+Output power is determined experimentally. Use graph to determine
+$P_{max}$. Geometrically, it can be found by maximizing the area of the
+green rectangle that can fit within the I-V plot of the solar cell.
+\begin{gather}
+	P_{max} = I_{max} V_{max} = FF I_{sc}V_{oc} \\
+	FF = fill factor = \frac{P_{max}}{I_{sc}V_{oc}}
+\end{gather}
+\subsubsection{Efficiency}
+\begin{equation}
+	\eta = FF \frac{I_{sc}V_{oc}}{P_{in}}
+\end{equation}
+\section{Week 9}
+\subsection{Capacity of Battery}
+Energy stored in a battery is in $Wh$ but batteries are rated in terms
+of capacity $Ah$. Capacity ($Ah$) measures the amount of charge in a fully
+charged battery that can be delivered under specified or nominal discharge
+current and temperature. It is simply the product of the current drawn from
+a battery, multiplied by the number of hours this current flows.
+
+\noindent \\ How long can a 2Ah battery discharge a current at 1A? 2 hours.
+
+\subsection{Depth of Discharge (DOD)}
+Percentage of the battery that has been discharge relative to the overall
+capacity of the battery.
+\begin{equation}
+	DOD = \displaystyle\frac{\text{capacity that is discharged from a fully charged battery}}{\text{battery capacity}}
+\end{equation}
+DOD affects the cycle service life of the battery.
+For some batteries, there are maximum depth of discharge recommendations.
+\subsection{Nominal Voltage}
+Nominal voltage or mid-point voltage is the voltage when 50\% of the
+available capacity is discharged.
+\subsection{Cut-off Voltage}
+Minimum allowable voltage to prevent damage to the battery.
+\subsubsection{Discharge Current Effect on Voltage and Capacity}
+Voltage of the battery is different with different discharge current.
+The \textbf{higher} the discharge current, the \textbf{lower} the voltage.
+Capacity changes with the value of the discharge current. The \textbf{lower}
+the discharge current, the \textbf{longer} the discharge time.
+\subsection{Specific Energy/Energy Density}
+Specific energy ($\frac{Wh}{kg}$) is the energy stored per unit mass.
+Energy density ($\frac{Wh}{L}$) is the energy stored per unit volume
+Energy content ($Wh$) of a battery determines its run time; related
+to the specific energy or energy density.
+The theoretical limit of specific energy is determined by standard
+reduction potential (voltage of the battery), the number of electrons involved,
+and mass of th eactive materials.
+\begin{equation}
+	\text{Theoretical specific energy of battery}[\frac{Wh}{kg}] = \displaystyle\frac{V[V]\times(\text{number of electrons}\times q)[Ah]}{\text{mass of active materials}[kg]}
+\end{equation}
+\subsection{Power Density and Specific Power}
+Power density ($\frac{W}{L}$) is the maximum amount of power per unit volume.
+Specific power ($\frac{W}{kg}$) is the maximum amount of power per unit
+mass. Which is a characteristic of the battery chemistry and packaging.
+\subsection{Self Discharge Rate}
+Loss of capacity through reactions during the battery storage and when battery
+is not connected to a load. Self-discharge is usually reversible when a
+battery is recharged (the capacity is restored). For lead-acid batteries
+the product of discharge reaction is lead sulfate which maya build and grow
+irreversibly if the recharge doesn't occur within a certain amount of time.
+\subsection{End of Life (EOL)}
+Batteries that have reached the end of their usefulness and/or lifespan
+and no longer operate at sufficient capacity. Use graph find curve.
+\subsection{Days of Autonomy}
+Days of autonomy is the duration the battery can supply the site's loads
+without any support from generation sources. (eg, cloudy days). System
+design requirement that takes the following into consideration,
+\begin{itemize}
+	\item System application - critical load applications require more autonomy
+	      than non-critical appliactions
+	\item System availability - minimum percentage of the time that the PV system
+	      should be able to satisfy the system's specified design loads. Standalone
+	      PV system requires some battery reserve to ensure reliability of service
+	      and to provide time for intervention in the event of an unanticipated occurence.
+\end{itemize}
+\subsection{Designing a Standalone PV System}
+\subsubsection{Determine the load energy requirement}
+\begin{enumerate}
+	\item Assume total system losses
+	\item Determine peak sun hours
+	\item Decide on Array:Load ratio (More means less chance for standalone system to not work)
+	\item Choose a PV module
+	\item Daily photovoltaic Ah needed: load requirement x A:L ratio
+	\item Convert total system losses to percentage and subtract from 1
+	\item Daily photovoltaic ampere-hours per chosen solar panel: system loss percentage x peak sun hours x current at $P_{max}$
+	\item Number of panels required: Daily photovoltaic ampere-hours needed / daily photovoltaic ampere-hours per chosen solar panel
+	\item Actual number of panels required: Round number of panel required up
+	\item Go to sg.rs-online.com
+\end{enumerate}
+\subsubsection{Sizing of the battery}
+\begin{enumerate}
+	\item Nominal system voltage: Refer to Load
+	\item Days of autonomy: Determine by use-case
+	\item Total daily load: Load current [A] x hour of operations per day [h] $\rightarrow$ [Ah]
+	\item Unadjusted battery capacity: Days of autonomy x total daily load [Ah]
+	\item Maximum allowable depth of discharge: based on battery, 80\% for lead acid so it won't die
+	\item Capacity adjusted for MDOD: Unadjusted battery capacity / MDOD [Ah]
+	\item Maximum daily depth of discharge: Based on EOL then look at graph
+	\item Capacity adjusted MDDOD: Total daily load / MDDOD
+	\item Percent of capacity at EOL: set by how you want to sell the battery
+	\item Capacity adjusted for EOL: Capacity adjusted for MDOD / Percent of capacity at EOL
+	\item Capacity adjusted for DODs or EOL: Greatest capacity adjusted value
+	\item Design margin factor: anything $\geq 1$
+	\item Capacity adjusted for design margin: greatest value x design margin factor
+	\item Find battery on sg.rs-online.com
+\end{enumerate}
+\end{document}

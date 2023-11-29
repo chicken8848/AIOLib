@@ -489,9 +489,9 @@ the conjunction of all these compound propositions true.
 \noindent We start by breaking down our problem into some propositions
 \begin{enumerate}
 	\item $q_{1} \Leftrightarrow$ "Every row must contain every number" \\ $\Rightarrow \forall i \forall n \exists j P(i,j,n)$ \\
-	      $\Rightarrow \wedge_{i=1}^{9} \wedge_{n=1}^{9} \vee_{j=1}^{9} P(i,j,k)$
+	      $\Rightarrow \wedge_{i=1}^{9} \wedge_{n=1}^{9} \vee_{j=1}^{9} P(i,j,n)$
 	\item $q_{2} \Leftrightarrow$ "Every column must contain every number" \\ $\Rightarrow \forall j \forall n \exists i P(i,j,n)$ \\
-	      $\Rightarrow \wedge_{j=1}^{9} \wedge_{n=1}^{9} \vee_{i=1}^{9} P(i,j,k)$
+	      $\Rightarrow \wedge_{j=1}^{9} \wedge_{n=1}^{9} \vee_{i=1}^{9} P(i,j,n)$
 	\item $q_{3} \Leftrightarrow$ "Each of the $3 \times 3$ block must contain every number" \\
 	      $\Rightarrow \forall r \forall c \forall n \exists m \exists s P(3r+m, 3c+s, n)$ \\
 	      $\Rightarrow \wedge_{r=0}^{2} \wedge_{c=0}^{2} \wedge_{n=1}^{9} \vee_{m=1}^{3} \vee_{s=1}^{3}P(3r+m, 3c+s, n)$
@@ -514,9 +514,30 @@ Establish these logical equivalences, where $x$ does not occur as a free variabl
 	\item $\forall x(P(x) \Rightarrow A) \Leftrightarrow \exists xP(x) \Rightarrow A$
 	\item $\exists x(A \Rightarrow P(x)) \Leftrightarrow \forall xP(x) \Rightarrow A$
 \end{enumerate}
+As an example, let's say
+\begin{enumerate}
+	\item Domain: All objects
+	\item $P(x)$: "$x$ needs air, food and water."
+	\item $A$: "Living things need air, food and water."
+\end{enumerate}
+Express statements 1 and 2 in English.
 \subsection*{Exercise 3}
 Show that $(p \wedge q) \Rightarrow (p \vee q)$ is a tautology.
+\subsection*{Exercise 4}
+Fill in the truth table and find all logical equivalences.
+\begin{center}
+	\begin{tabular}[c]{|l|l|l|l|l|l|l|}
+		\hline
+		$p$ & $q$ & $p \wedge q$ & $\neg (p \Rightarrow \neg q)$ & $\neg (p \Leftrightarrow q$) & $p \Leftrightarrow \neg q$ \\
+		\hline
+		T   & T   &              &                               &                              &                            \\
+		T   & F   &              &                               &                              &                            \\
+		F   & T   &              &                               &                              &                            \\
+		F   & F   &              &                               &                              &                            \\
 
+		\hline
+	\end{tabular}
+\end{center}
 
 
 
