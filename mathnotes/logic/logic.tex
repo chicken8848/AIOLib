@@ -10,7 +10,6 @@
 
 \title{Introduction to Mathematical Logic}
 \author{Joshua John Lee Shi Kai}
-
 \begin{document}
 
 \maketitle
@@ -497,7 +496,7 @@ the conjunction of all these compound propositions true.
 	      $\Rightarrow \forall r \forall c \forall n \exists m \exists s P(3r+m, 3c+s, n)$ \\
 	      $\Rightarrow \wedge_{r=0}^{2} \wedge_{c=0}^{2} \wedge_{n=1}^{9} \vee_{m=1}^{3} \vee_{s=1}^{3}P(3r+m, 3c+s, n)$
 	\item $q_{4} \Leftrightarrow$ "No cell contains more than 1 number" \\
-	      $\Rightarrow \forall i \forall j \forall n \forall n^{'}(k \nequal n^{'} \wedge P(i,j,n) \Rightarrow \neg P(i,j,n^{'}))$ \\
+	      $\Rightarrow \forall i \forall j \forall n \forall n^{'}(n \nequal n^{'} \wedge P(i,j,n) \Rightarrow \neg P(i,j,n^{'}))$ \\
 	      $\Rightarrow \wedge_{i=1}^9 \wedge_{j=1}^9 \wedge_{n=1}^9 \wedge_{n^{'}=1}^9 (n \nequal n^{'} \wedge P(i,j,n) \Rightarrow \neg P(i,j,n^{'}))$
 \end{enumerate}
 
@@ -516,13 +515,6 @@ Establish these logical equivalences, where $x$ does not occur as a free variabl
 	\item $\exists x(A \Rightarrow P(x)) \Leftrightarrow \forall xP(x) \Rightarrow A$
 \end{enumerate}
 \subsection*{Exercise 3}
-From Exercise 2, let
-\begin{enumerate}
-	\item $P(x)$ be the statement where "SUTD takes in $x$ students"
-	\item $A$ is the statement that "SUTD is a good school"
-\end{enumerate}
-Express sentences 1 and 2 from Exercise 2 in English.
-\subsection*{Exercise 4}
 Show that $(p \wedge q) \Rightarrow (p \vee q)$ is a tautology.
 
 

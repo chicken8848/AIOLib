@@ -1,6 +1,11 @@
 \documentclass{article}
+\usepackage{graphicx}
+\graphicspath{./diagrams}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 
@@ -9,9 +14,9 @@
 
 \begin{document}
 \maketitle
+\tableofcontents
 
 \newpage
-
 \section{Introduction}
 Complex Analysis is quite similar to real analysis, except it works with complex numbers of the form
 $x + iy$, where $x, y \in \mathbb{R}, i^2 = -1$. We represent real numbers on a line, we represent complex
@@ -66,19 +71,123 @@ So its quite clear what this integral is meant.
 \noindent \\ But if we are integrating in the complex plane,
 \begin{center}
 	\begin{tikzpicture}
-		\begin{axis}[xmin=0,xmax=3,ymin=0,ymax=3,xlabel = $x$, ylabel = $i$, axis lines = middle]
+		\begin{axis}[xmin=-1,xmax=3,ymin=-1,ymax=3,xlabel = $x$, ylabel = $i$, axis lines = middle]
 			\fill (1,0) circle[radius = 2pt] node[above right]{$(1,0)$};
 			\fill (0,1) circle[radius = 2pt] node[above right]{$(0,1)$};
+			\addplot [
+				domain=0:1,
+				samples=150,
+				color=blue,
+			]
+			{2*x - 2*x^2};
+			\addplot [
+				domain=0:1,
+				samples=150,
+				color=red,
+			]
+			{4*x - 4*x^2};
+			\addplot [
+				domain=0:1,
+				samples=150,
+				color=purple,
+			]
+			{-3*x + 3*x^2};
+
 		\end{axis}
 	\end{tikzpicture}
 \end{center}
 There are many ways to go from 0 to 1. So the integral from 0 to 1 seems to depend on which path you take.
 Turns out that it almost doesn't. We have Cauch's theorem, that integrals are almost independent of the path
-we take from 0 to 1. This turns out to extremely useful. For example in real analysis
+we take from 0 to 1. This turns out to extremely useful. For example in real analysis, there are some equations integrals and sums that we don't learn how to evaluate in ordinary
+introductory calculus classes. But you can work out these using complex integration.
+\begin{gather*}
+	\int_{0}^{\infty}\frac{sinx}{x}dx = \frac{\pi}{2} \\
+	\displaystyle\sum_{i=1}^{\infty} \frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \cdots = \frac{\pi^2}{6}
+\end{gather*}
+\subsection{Analytic Continuation}
+Suppose I give you a function from 0 to 1, and ask you to evaluate it at $x = -1$, that would be a
+completely stupid question. There's no way to evaluate it at $-1$. There is no real information.
+However for complex functions, if I give you a function from 0 to 1, and it is differentiable, it is
+automatically determined in any connected region.
 
+\noindent The function on $(a,b)$ is determined uniquely on larger open connected set if it complex differentiable.
+
+\noindent There is a very famous function of this. The Riemann Zeta Function
 \begin{displaymath}
-	\int_{0}^{\inf}
+	\zeta(s) = \frac{1}{1^s}	+ \frac{1}{2^s}	+ \frac{1}{3^s}	+ \cdots
 \end{displaymath}
+This is probably the single most notorious function in mathematics, the Riemann hypothesis, which
+states that all zeros of $\zeta (s)$ are real or have real part of $\frac{1}{2}$
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+				legend pos=outer north east,
+				title=Riemann Hypothesis,
+				xmin=-1, xmax=3,
+				ymin=-1, ymax=3,
+				axis lines=middle,
+				xlabel = $x$,
+				ylabel = $i$,
+				variable = x,
+				trig format plots = rad,
+			]
+
+			\draw[purple, thick] (0.5, 3) -- (0.5, -1) node[left, pos=0.6] {$x=\frac{1}{2}$};
+			\draw[blue, thick] (1, 3) -- (1, -1) node[right, pos=0.5] {$x=1$};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+Well the Riemann Hypothesis makes no sense at all because if we try to evaluate it it only converges if
+$\Re(s) > 1$
+\begin{equation}
+	1 + \frac{1}{2} + \frac{1}{3} + \cdots = \infty
+\end{equation}
+And the function only converges on the right side of $x = 1$. Well it turns out the Riemann Zeta
+function can be analytically continued. In other words, there's only one differentiable complex function
+that extends the Riemann Zeta function to the whole complex plane, except well, 1 because it would not
+converge. Why should people care about the Riemann Zeta function? Well it seems to control prime numbers,
+if we draw prime numbers on a real line,
+\begin{center}
+	\begin{tikzpicture}
+		\draw[latex-latex] (0,0) -- (8,0) ; %edit here for the axis
+		\foreach \x in  {2,3,5,7} % edit here for the vertical lines
+		\draw[shift={(\x,0)},color=black] (0pt,3pt) -- (0pt,-3pt);
+		\foreach \x in {2,3,5,7} % edit here for the numbers
+		\draw[shift={(\x,0)},color=black] (0pt,0pt) -- (0pt,-3pt) node[below]
+		{$\x$};
+	\end{tikzpicture}
+\end{center}
+You can see that they are more dense in some regions, and in some regions
+they are less dense. Something like a sort of compression wave. Riemann
+discovered that this waves in the primes happen at very precise frequencies,
+and the frequencies turn out to be the imaginary parts of the zeroes of the
+zeta function. The amplitude of each wave turn out to be the real part. So
+the Riemann Hypothesis seems to suggest that primes have a lot of waves going
+through them. And all these waves in some sense have the same loudness, or volume.
+
+\subsection{Complex Dynamics}
+This is related to a planar set called the Mandel Brot set. We can ask what is the Mandel Brot set?
+
+\noindent You take a complex number, you keep on applying the transformation, while c is fixed
+\begin{center}
+	\begin{tabular}{lll}
+		$z$   & $\rightarrow z^{2} + c$  &                      \\
+		$0$   & $\rightarrow 0^{2} + c $ & $\rightarrow \cdots$ \\
+		$z_0$ & $\rightarrow z_1$        & $\rightarrow z_2$    \\
+		      & $= z_0^2 + c$            & = $z_1^2 + c$        \\
+	\end{tabular}
+\end{center}
+And you can ask whether this sequence is \textbf{bounded}. And this obviously depends on c.
+So if this sequence is bounded, it is the same as saying c is in the Mandel Brot set. The thing is
+that the Mandel Brot set is incredibly intricate.
+\begin{center}
+	\includegraphics[width=\textwidth]{/diagrams/mandelbrot}
+\end{center}
+
+\noindent \\ Well that's the end of the summary.
+
+\section{Arithmetic}
 
 
 \end{document}
