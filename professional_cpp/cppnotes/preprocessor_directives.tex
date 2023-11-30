@@ -1,0 +1,48 @@
+\setlength\parindent{0pt}
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{txfonts}
+\usepackage{MnSymbol}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+
+\title{C++ Notes}
+\author{Joshua John Lee Shi Kai}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\newpage
+\section{Preprocessor Directives}
+The following table shows some of the most common preprocessor directives
+\begin{center}
+	\begin{tabularx}{\textwidth}{
+			| >{\raggedright\arraybackslash}X
+			| >{\raggedright\arraybackslash}X
+			| >{\raggedright\arraybackslash}X |
+		}
+		\hline
+		\textbf{PREPROCESSOR DIRECTIVE} & \textbf{FUNCTIONALITY}                                                                                                                                                           & \textbf{COMMON USES}                                                                                                                                                                                                                                              \\
+		\hline
+		\#include [file]                & The specified file is inserted into the code at the location of the directive                                                                                                    & Almost always used to include header files so that code can make use of functionality defined elsewhere                                                                                                                                                           \\
+		\hline
+		\#define [key] [value]          & Every occurence of the specified key is replaced with the specified value.                                                                                                       & Often used in C to define a constant value or a macro. C++ provides better mechanisms for constants and macros. Macros are often dangerous so use them cautiously.                                                                                                \\
+		\hline
+		\#ifdef [key] \newline
+		\#endif \newline
+		\#ifndef [key] \newline
+		\#endif                         & Code within the ifdef ("if defined") or ifndef ("if not defined") blocks are conditionally included or omitted based on whether the specified key has been defined with \#define & Used most frequently to protect against circlar includes. Each include file starts with a \#ifndef checking the absence of a key, followed by defining that key. The include file ends with a \#endif. This prevents the file from being included multiple times. \\
+		\hline
+		\#pragma [xyz]                  & xyz varies from compiler to compiler. Often allows the programmer to display a warning or error if the directive is reached during preprocessing                                 & See examples                                                                                                                                                                                                                                                      \\
+		\hline
+	\end{tabularx}
+\end{center}
+
+
+
+\end{document}
