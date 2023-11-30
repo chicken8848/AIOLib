@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1701273496 "DESfinalsnotes.tex" "DESfinalsnotes.pdf" "DESfinalsnotes" 1701273497 0
+["pdflatex"] 1701324554 "DESfinalsnotes.tex" "DESfinalsnotes.pdf" "DESfinalsnotes" 1701324555 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1689853683 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1689853683 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -176,9 +176,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1692970188 4482925 a1a254cacf5c7108f7b28226c8f3b19f ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1699895922 6768061 ce4d83b6002faba598e77c06e2baceda ""
-  "DESfinalsnotes.aux" 1701273497 3204 d2d2c2151528e688ae293bf56a80f342 "pdflatex"
-  "DESfinalsnotes.tex" 1701273495 11866 c0ebdd214aec5ec2bc3a1e0daf3ea2b1 ""
-  "DESfinalsnotes.toc" 1701273497 2065 e15b4fe03a59d3bd652cba1e0cf66828 "pdflatex"
+  "DESfinalsnotes.aux" 1701324555 3204 d2d2c2151528e688ae293bf56a80f342 "pdflatex"
+  "DESfinalsnotes.tex" 1701324544 11845 c74bf4e93834bd8a83f5cee568dce28d ""
+  "DESfinalsnotes.toc" 1701324555 2065 e15b4fe03a59d3bd652cba1e0cf66828 "pdflatex"
   (generated)
   "DESfinalsnotes.aux"
   "DESfinalsnotes.log"
