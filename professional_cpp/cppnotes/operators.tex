@@ -1,0 +1,53 @@
+\setlength\parindent{0pt}
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{txfonts}
+\usepackage{MnSymbol}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{fancyvrb}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\begin{document}
+\section{Variables}
+The table that follows shows the most common types used in C++
+\begin{center}
+	\begin{tabularx}{\textwidth}{
+			| >{\raggedright\arraybackslash}X
+			| >{\raggedright\arraybackslash}X
+			| >{\raggedright\arraybackslash}X |
+		}
+		\hline
+		\textbf{OPERATOR}                               & \textbf{DESCRIPTION}                                                                                                                                                                                                                                                                                    & \textbf{USAGE}                                                               \\
+		\hline
+		$=$                                              & Binary operator to assign the value on the right to the expression on the left                                                                                                                                                                                                                          & int i; \newline i $=$3;                                                        \\
+		\hline
+		!                                               & Unary operator to complement the true/false (non-0/0) status of an expression.                                                                                                                                                                                                                          & bool b $=$ !true; \newline bool b2 = !b;                                       \\
+		\hline
+		$+$                                             & Binary operator for addition                                                                                                                                                                                                                                                                            & int $i = 3+2$; \newline int $j = i+5$;                                           \\
+		\hline
+		$-$ \newline $*$ \newline $/$                   & Binary operators for subtraction, multiplication, and division.                                                                                                                                                                                                                                         & int $i = 5-1$; \newline int $j = 5*2$; \newline int $k = j/i$;                     \\
+		\hline
+		\%                                              & Binary operator for remainder of a division operation.                                                                                                                                                                                                                                                  & int remainder $= 5 \% 2$;                                                      \\
+		\hline
+		$++$                                            & Unary operator to increment an expression by 1. If the operator occurs after the expression or \textit{post-increment}, the result of the expression is the unincremented value. If the operator occurs before the expression or \textit{pre-increment}, the result of the expression is the new value & i$++$; \newline $++$i;                                                       \\
+		\hline
+		$--$                                            & Unary operator to decrement an expression by 1.                                                                                                                                                                                                                                                         & i$--$; \newline $--$i;                                                       \\
+		\hline
+		$+=$                                            & Shorthand syntax for $i = i + j$                                                                                                                                                                                                                                                                          & i $+=$ j;                                                                    \\
+		\hline
+		$-=$ \newline $*=$ \newline $/=$ \newline $\%=$ & Shorthand syntax                                                                                                                                                                                                                                                                                        & $i = i - j$; \newline $i = i*j$; \newline $i= i / j$; \newline $i = i \% j$; \\
+		\hline
+		\& \newline \&$=$ & Takes the raw bits of one expression and performs a bitwise "AND" with the other expression & $i = j \& k$; \newline $j \&= k$;\\
+		\hline
+		$\vert$ \newline $\vert=$ & Takes the raw bits of one expression and performs a bitwise "OR" with the other expression & $i = j \vert k$; \newline $j \vert= k$; \\
+		\hline
+		$>>$ \newline $<<$ \newline $<<=$ \newline $>>=$ & Takes the raw bits of an expression and "shifts" each bit left ($<<$) or right ($>>$) the specified number of places. & $i = i << 1$; \newline $i = i >> 4$; \newline $i <<= 1$; \newline $i >>= 4$; \\
+		\hline
+		\string^ \newline \string^= & Performs a bitwise "exclusive or," also called "XOR" operation, on the two expressions. & $i = i \string^ j$; \newline $i \string^= j$;\\
+		\hline
+	\end{tabularx}
+\end{center}
+\end{document}

@@ -1,0 +1,88 @@
+\setlength\parindent{0pt}
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{txfonts}
+\usepackage{MnSymbol}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{fancyvrb}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\begin{document}
+\section{Variables}
+The table that follows shows the most common types used in C++
+\begin{center}
+	\begin{tabularx}{\textwidth}{
+			| >{\raggedright\arraybackslash}X
+			| >{\raggedright\arraybackslash}X
+			| >{\raggedright\arraybackslash}X |
+		}
+		\hline
+		\textbf{TYPE}                                                                                               & \textbf{DESCRIPTION}                                                                          & \textbf{USAGE}                                                                                                                                             \\
+		\hline
+		int \newline signed                                                                                         & Positive and negative integers; range depends on compiler                                     & int i $=$ -7; \newline signed j = -5;                                                                                                                      \\
+		\hline
+		\short (int)                                                                                                & Short integer (usually 2 bytes)                                                               & short s $=$ 13;                                                                                                                                            \\
+		\hline
+		long (int)                                                                                                  & Long integer (usually 4 byets)                                                                & long l $=$ -7L;                                                                                                                                            \\
+		\hline
+		long long (int)                                                                                             & Long long integer; range depends on compiler, but at least the same as long (usually 8 bytes) & long long ll $=$ 14LL                                                                                                                                      \\
+		\hline
+		unsigned (int) \newline unsigned short (int) \newline unsigned long (int) \newline unsigned long long (int) & Limits the preceding types to values $>$=$0$                                                  & unsigned int i = 2U; \newline unsigned j = 5U; \newline unsigned short s = 23U; \newline unsigned long l = 5400L; \newline unsigned long long ll = 140ULL; \\
+		\hline
+		float                                                                                                       & Floating-point numbers                                                                        & float f $=$ 7.2f;                                                                                                                                          \\
+		\hline
+		double                                                                                                      & Double precision numbers; precision is at least the same as for float                         & double d $=$ 7.2;                                                                                                                                          \\
+		\hline
+		long double                                                                                                 & Long double precision numbers; precision at least the same as for double                      & long double d $=$ 16.98L;                                                                                                                                  \\
+		\hline
+		char                                                                                                        & A single character                                                                            & char ch $=$ 'm';                                                                                                                                           \\
+		\hline
+		char16\_t                                                                                                   & a single 16-bit character                                                                     & char16\_t c16 $=$ u'm';                                                                                                                                    \\
+		\hline
+		char32\_t                                                                                                   & A single 32-bit character                                                                     & char32\_t c32 $=$ U'm';                                                                                                                                    \\
+		\hline
+		wchar\_t                                                                                                    & A single wide-character; size depends on compiler                                             & wchar\_t $=$ L'm';                                                                                                                                         \\
+		\hline
+		bool                                                                                                        & true or false                                                                                 & bool b $=$ true;                                                                                                                                           \\
+		\hline
+	\end{tabularx}
+\end{center}
+The best way to to cast a type to another type, as an example a float to an int is shown
+\begin{verbatim}
+float myFloat = 3.14f;
+int i = static_cast<int>(myFloat)
+\end{verbatim}
+In some context, variables can be automatically cast, or \textit{coerced}. For example, a short
+can be automatically cast into a long because a long represents the same type
+of data with at least the same precision.
+\begin{verbatim}
+long someLong = someShort // no explicit cast needed
+\end{verbatim}
+When automatically casting variables, you need to be aware of the potential loss of data.
+\section{Literals}
+Literals are used to write numbers or strings in your code. C++ supports a number of standard literals.
+All 4 represent the same number
+\begin{itemize}
+	\item Decimal literal, for example: 123
+	\item Octal literal, for example: 0173
+	\item Hexadecimal literal, for example: 0x7B
+	\item Binary literal, for example: 0b1111011
+\end{itemize}
+There are other kinds of literals in C++:
+\begin{itemize}
+	\item A floating point value: 3.14f
+	\item A double floating point value: 3.14
+	\item A single character: 'a'
+	\item a zero-terminated array of characters: "character array"
+\end{itemize}
+It's also possible to define your own type of literals, which is an advanced feature later on.
+
+\noindent \\ C++ 14 allows the use of digits seperators in numeric literals
+\begin{verbatim}
+int number1 = 23'456'789;
+float number2 = 0.123'456f
+\end{verbatim}
+\end{document}

@@ -1,0 +1,91 @@
+\setlength\parindent{0pt}
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{txfonts}
+\usepackage{MnSymbol}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{fancyvrb}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\begin{document}
+\section{Types}
+In C++, you can use the basic types to build more complex types of your own design. But you will never
+use it, because classes are far more powerful. Still, it is important to know about the following
+ways of building types so that you will recognize the syntax.
+\subsection{Enumerated Types}
+\textit{Enumerated types} let you define your own sequences so that you can declare variables with values
+in that sequence. As an example, in a chess program, you \textit{could} represent each piece as an int,
+with const to indicate that they can never change.
+\begin{verbatim}
+const int PieceTypeKing = 0;
+const int PieceTypeQueen = 1;
+const int PieceTypeRook = 2;
+const int PieceTypePawn = 3;
+//etc
+int myPiece = PieceTypeKing; 
+\end{verbatim}
+However, this can become dangerous. Since a piece is just an int, another programmer could add code
+to increment the value of a piece. Enumerated types solve these problems by tightly defining the range
+of values for a variable. The following declares a new type, PieceType, representing chess pieces.
+\begin{verbatim}
+enum PieceType 
+{
+  PieceTypeKing,
+  PieceTypeQueen,
+  PieceTypeRook,
+  PieceTypePawn
+};
+\end{verbatim}
+By defining possible values for variables of type PieceType, the compiler would give a warning or error
+if you attempt to perform arithmetic on PieceType variables or treat them as integers. The following
+code results in a warning or error on most compilers.
+\begin{verbatim}
+   PieceType myPiece;
+   myPiece = 0;
+\end{verbatim}
+It is also possible to specify integer values for members of an enumeration. The syntax is as follows.
+\begin{verbatim}
+enum PieceType
+{
+  PieceTypeKing = 1,
+  PieceTypeQueen,
+  PieceTypeRook = 10,
+  PieceTypePawn
+};
+\end{verbatim}
+In this case, PieceTypeQueen has the value 2, and PieceTypePawn has the value 11, automatically assigned
+by the compiler.
+\subsection{Strongly Typed Enumerations}
+Enumerations above are not strongly typed, meaning they are not type-safe. They are always interpreted
+as integers, and thus you can compare enumeration values from completely different enumeration types.
+The enum class solves these problems. For example:
+\begin{verbatim}
+enum class MyEnum
+{
+  EnumValue1,
+  EnumValue2 = 10,
+  EnumValue3
+};
+\end{verbatim}
+This is a type-safe enumeration called MyEnum. These enumeration value names are not automatically
+exported to the enclosing scope, which means you always have to use the scope resolution operator:
+\begin{verbatim}
+MyEnum value1 = MyEnum::EnumValue1;
+\end{verbatim}
+The enumeration values are not automatically converted to integers, which means the following is illegal
+\begin{verbatim}
+if (MyEnum::EnumValues3 == 11){...}
+\end{verbatim}
+By default, the underlying type of an enumeration is an integer, but this can be changed as follows:
+\begin{verbatim}
+enum class MyEnumLong : unsigned long
+{
+   EnumValueLong1,
+   EnumValueLong2 = 10,
+   EnumValueLong3
+};
+\end{verbatim}
+\end{document}

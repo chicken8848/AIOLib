@@ -1,0 +1,52 @@
+\setlength\parindent{0pt}
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{txfonts}
+\usepackage{MnSymbol}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{fancyvrb}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\begin{document}
+\section{Structs}
+\textit{Structs} let you encapsulate one or more existing types into a new type. The classic example
+of a struct is a database record. If you are building a personnel systetm to keep track of employee
+information, you will need to store the first initial, last initial, employee number, and salary for
+each employee. A struct that contains all of this information is shown in the employeestruct.h header
+file that follows:
+\begin{verbatim}
+struct Employee {
+    char firstInitial;
+    char lastInitial;
+    int employeeNumber;
+    int salary;
+};
+\end{verbatim}
+A variable declared with type Employee will have all of these fields built-in. The individual fields
+of a struct can be accessed by using the "." operator. The example that follows creates and then
+outputs the record for an employee:
+\begin{verbatim}
+#include <iostream>
+#include "employeestruct.h"
+using namespace std;
+int main()
+{
+    // Create and populate an employee.
+    Employee anEmployee;
+    anEmployee.firstInitial = 'M';
+    anEmployee.lastInitial = 'G';
+    anEmployee.employeeNumber = 42;
+    anEmployee.salary = 80000;
+    // Outpyut the values of an employee
+    cout << "Employee: " << anEmployee.firstInitial  << 
+                            anEmployee.lastInitial << endl;
+    cout << "Number: " << anEmployee.employeeNumber << endl;
+    cout << "Salary: $" << anEmployee.salary << endl;
+    return 0;
+}
+  
+\end{verbatim}
+\end{document}

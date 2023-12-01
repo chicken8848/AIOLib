@@ -1,0 +1,84 @@
+\setlength\parindent{0pt}
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{txfonts}
+\usepackage{MnSymbol}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{fancyvrb}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\begin{document}
+\section{Variables}
+The table that follows shows the most common types used in C++
+\begin{center}
+	\begin{tabularx}{\textwidth}{
+			| >{\raggedright\arraybackslash}X
+			| >{\raggedright\arraybackslash}X
+			| >{\raggedright\arraybackslash}X |
+		}
+		\hline
+		\textbf{OPERATOR}                               & \textbf{DESCRIPTION}                                                                                                                                                                                                                                                                                    & \textbf{USAGE}                                                               \\
+		\hline
+		$=$                                              & Binary operator to assign the value on the right to the expression on the left                                                                                                                                                                                                                          & int i; \newline i $=$3;                                                        \\
+		\hline
+		!                                               & Unary operator to complement the true/false (non-0/0) status of an expression.                                                                                                                                                                                                                          & bool b $=$ !true; \newline bool b2 = !b;                                       \\
+		\hline
+		$+$                                             & Binary operator for addition                                                                                                                                                                                                                                                                            & int $i = 3+2$; \newline int $j = i+5$;                                           \\
+		\hline
+		$-$ \newline $*$ \newline $/$                   & Binary operators for subtraction, multiplication, and division.                                                                                                                                                                                                                                         & int $i = 5-1$; \newline int $j = 5*2$; \newline int $k = j/i$;                     \\
+		\hline
+		\%                                              & Binary operator for remainder of a division operation.                                                                                                                                                                                                                                                  & int remainder $= 5 \% 2$;                                                      \\
+		\hline
+		$++$                                            & Unary operator to increment an expression by 1. If the operator occurs after the expression or \textit{post-increment}, the result of the expression is the unincremented value. If the operator occurs before the expression or \textit{pre-increment}, the result of the expression is the new value & i$++$; \newline $++$i;                                                       \\
+		\hline
+		$--$                                            & Unary operator to decrement an expression by 1.                                                                                                                                                                                                                                                         & i$--$; \newline $--$i;                                                       \\
+		\hline
+		$+=$                                            & Shorthand syntax for $i = i + j$                                                                                                                                                                                                                                                                          & i $+=$ j;                                                                    \\
+		\hline
+		$-=$ \newline $*=$ \newline $/=$ \newline $\%=$ & Shorthand syntax                                                                                                                                                                                                                                                                                        & $i = i - j$; \newline $i = i*j$; \newline $i= i / j$; \newline $i = i \% j$; \\
+		\hline
+		\& \newline \&$=$ & Takes the raw bits of one expression and performs a bitwise "AND" with the other expression & i \= j \& k; \newline j \&\= k;\\
+		\hline
+		| \newline |\= & Takes the raw bits of one expression and performs a bitwise "OR" with the other expression & i \= j | k; \newline j |\= k; \\
+		\hline
+	\end{tabularx}
+\end{center}
+The best way to to cast a type to another type, as an example a float to an int is shown
+\begin{verbatim}
+float myFloat = 3.14f;
+int i = static_cast<int>(myFloat)
+\end{verbatim}
+In some context, variables can be automatically cast, or \textit{coerced}. For example, a short
+can be automatically cast into a long because a long represents the same type
+of data with at least the same precision.
+\begin{verbatim}
+long someLong = someShort // no explicit cast needed
+\end{verbatim}
+When automatically casting variables, you need to be aware of the potential loss of data.
+\section{Literals}
+Literals are used to write numbers or strings in your code. C++ supports a number of standard literals.
+All 4 represent the same number
+\begin{itemize}
+	\item Decimal literal, for example: 123
+	\item Octal literal, for example: 0173
+	\item Hexadecimal literal, for example: 0x7B
+	\item Binary literal, for example: 0b1111011
+\end{itemize}
+There are other kinds of literals in C++:
+\begin{itemize}
+	\item A floating point value: 3.14f
+	\item A double floating point value: 3.14
+	\item A single character: 'a'
+	\item a zero-terminated array of characters: "character array"
+\end{itemize}
+It's also possible to define your own type of literals, which is an advanced feature later on.
+
+\noindent \\ C++ 14 allows the use of digits seperators in numeric literals
+\begin{verbatim}
+int number1 = 23'456'789;
+float number2 = 0.123'456f
+\end{verbatim}
+\end{document}
