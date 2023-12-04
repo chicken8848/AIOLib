@@ -9,6 +9,8 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 
+\newtheorem{definition}{Definition}[section]
+
 \title{An Introduction to Complex Numbers}
 \author{Joshua John Lee Shi Kai}
 
@@ -188,6 +190,65 @@ that the Mandel Brot set is incredibly intricate.
 \noindent \\ Well that's the end of the summary.
 
 \section{Complex Arithmetic}
+Well if you were a computer, a complex number is nothing more than an ordered pair of numbers $(x,y)$. But
+if you were human you would write it as $x + iy$. But as a human, writing it as an ordered pair
+is good too because you could understand it as a plane. So you could represent each complex number
+as a point in a plane.
+\begin{definition}[Addition]
+	\begin{displaymath}
+		(a + ib) + (c+id) = a+c+ib+id
+	\end{displaymath}
+\end{definition}
+\begin{definition}[Multiplication]
+	\begin{align*}
+		(a,b)  \cdot (c,d)  & = (ac-bd, ad+bc)             \\
+		(a + ib) (c + id)   & = ac + i^{2}bd + ibc + iad   \\
+		\text{Since } i^{2} & = -1,                        \\
+		                    & \Rightarrow ac-bd + i(bc+ad)
+	\end{align*}
+\end{definition}
+\noindent That's why we remember complex numbers as $x+iy$ form, because
+it makes multiplication trivial to remember.
+\subsection{The usual stuff}
+Does it satisfy the usual rules:
+\begin{equation}
+	a(b+c) = ab+ac
+	(ab)c = a(bc)
+	\cdots
+\end{equation}
+Well we could
+\begin{enumerate}
+	\item Do a long check which we won't do because its long and tedious
+	\item Go to an abstract algebra course, and show that the definition of the complex numbers gives a ring
+	      with all the usual stuff
+\end{enumerate}
+\subsection{Division}
+Does $a+ib$ has an \textit{inverse} if it is $\neq 0$.
+
+\subsubsection{Complex Conjugation}
+Denoted by:
+\begin{gather*}
+	x + iy \rightarrow x - iy = \overline{x+iy}
+\end{gather*}
+The reason this turns up a lot is we said $i^{2} = -1$ but $-1$
+actually has 2 squareroots because $(-i)^{2} = -1$. So when we talk about
+a squareroot of $-1$ we don't really know which squareroot they
+are talking about and turns out, they are completely equivalent. Anything
+you can say about 1 squareroot you can say about the other squareroot.
+So you can sort of flip them around without changing anything. Complex
+conjugation actually \textit{preserves} all properties of the complex
+numbers. For example:
+\begin{gather}
+	\overline{z_{1}z_{2}} = \overline{z_1} \cdot \overline{z_2} \\
+	\overline{z_{1}+z_{2}} = \overline{z_1} + \overline{z_2}
+\end{gather}
+In fact, complex conjugation $z \rightarrow \overline{z}$ is an \textit{AUTOMORPHISM}
+of the complex numbers, $\mathbb{C}$. If you've done a Galois Theory course, another way
+of saying is this is the Galois group of the $\mathbb{C}/\mathbb{R}$ is $\{1,-\}$.
+
+\noindent \\ So using complex conjugation, we can find the inverse of any
+complex number as follows
+
 
 
 \end{document}

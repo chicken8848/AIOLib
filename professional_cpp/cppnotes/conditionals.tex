@@ -1,0 +1,89 @@
+\setlength\parindent{0pt}
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{txfonts}
+\usepackage{MnSymbol}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{fancyvrb}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\begin{document}
+\section{Conditionals}
+\textit{Conditionals} let you execute code based on whether or not something is true.
+As shown in the following sections, there are three main types of conditionals
+in C++.
+\subsection{if/else statements}
+The most common is the if/else statement
+\begin{verbatim}
+if (i > 4) {
+// Do something
+} else if (i>2) {
+// Do something else
+} else {
+// Do soemthing else
+}
+\end{verbatim}
+The expression between the parathesis must be a boolean value.
+\section{switch statements}
+The switch statement is an alternate syntax for performing actions based on the value of an expression.
+In C++ switch statements, the expression must be of an integral type or of a type that is convertible
+to integral type, and must be compared to constants. Each value represents a "case". Then the code
+following the case is executed until a break statement is reached. You can also provide a default case,
+which is matched if none of the other cases match.
+\begin{verbatim}
+switch(menuItem) {
+    case OpenMenuItem:
+        // Code to open a file
+        break;
+    case SaveMenuItem:
+        // Code to save a file
+        break;
+    default:
+        // Code to give an error message
+        break;
+}
+\end{verbatim}
+A switch statement can always be converted into if/else statements. The previous statement can be
+converted as follows:
+\begin{verbatim}
+if (menuItem == OpenMenuItem) {
+    // Code to open a file
+} else if (menuItem == SaveMenuItem) {
+    // Code to save a file
+} else {
+    // Code to give an error message
+}
+\end{verbatim}
+If a case section does not have a break statement, the code for that case section is executed first,
+followed by a \textit{fallthrough}, executing the code for the next case section whether or not
+that case matches. This can be a source of bugs, but is sometimes useful. One example is to have
+a single case section that is executed for several different cases. For example,
+\begin{verbatim}
+   case ColorDarkBlue;
+   case ColorBlack:
+      // Code to execute for both a dark blue or black background colour.
+      break;
+   case ColorRed:
+      // Code to execute for a red background colour
+      break;
+\end{verbatim}
+\subsection{The conditional operator}
+C++ has one operator that takes three arguments, known as the \textit{ternary operator}. It is used
+as a shorthand if/else statement. The following code will output "yes" if the variable is greater than
+2, and "no" otherwise.
+\begin{verbatim}
+   std::cout << ((i > 2) ? "yes" : "no");
+\end{verbatim}
+Unlike an if statement or a switch statemnt, the conditional operator doesn't execute code blocks based
+on the result. Instead it is used \textit{within} code, as shown as the preceding example. In a sense,
+it is an operator (like $+$ and $-$) as opposed to a true conditional.
+\subsection{Logical Evaluation Operators}
+\begin{center}
+	\begin{tabularx}{|\raggedleft X| X| X|}
+		\textbf{OP} & \textbf{DESCRIPTION} & \textbf{USAGE} \\
+	\end{tabularx}
+\end{center}
+\end{document}

@@ -1,0 +1,91 @@
+\setlength\parindent{0pt}
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{txfonts}
+\usepackage{MnSymbol}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{fancyvrb}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\begin{document}
+\section{Functions}
+Placing all code inside of main() is unmanageable. To make programs easy to understand, you need
+to break up, or \textit{decompose}, code into concise functions.
+
+\noindent \\ In C++, you first declare a function to make it available for other code to use. If the
+function is used only inside a particular file, you generally declare and define and the function in
+the source file. If the function is for use by other modules or files, you generally put the declaration
+in a header file and the definition in a source file.
+
+\noindent \\ \textbf{NOTE} Function declarations are often called "function protoypes" or "signatures"
+to emphasize that they represent how the function can be accessed, but not the code behind it.
+
+A function declaration is shown below.
+\begin{verbatim}
+      void myFunction(int i, char c);
+\end{verbatim}
+Without an actual definition to match this function declaration, the link stage of the compilation
+process will fail because code that makes use of the funciton will be calling nonexistent code.
+\begin{verbatim}
+      void myFunction(int i, char c) {
+          std::cout << "the value of i is " << i << std::endl;
+          std::cout << "the value of c is " << c << std::endl;
+      }
+\end{verbatim}
+Elsewhere in the program, you can make calls to myFunction() and pass in arguments for the two
+parameters.
+\begin{verbatim}
+      myFunction(8, 'a');
+      myFunction(someInt, 'b');
+      myFunction(5, someChar);
+\end{verbatim}
+C++ functions can also \textit{return} a value to the caller.
+\begin{verbatim}
+     int addNumbers(int number1, int number2) {
+          return number1 + number2;
+     } 
+\end{verbatim}
+Called as follows
+\begin{verbatim}
+      int sum = addNumbers(5, 3);
+\end{verbatim}
+Every function has a local predefined variable \_\_func\_\_ that looks as follows:
+\begin{verbatim}
+      static const char __func__[] = "function-name";
+\end{verbatim}
+This variable can for example be used for logging purposes:
+\begin{verbatim}
+      int addNumbers(int number1, int number2)
+      {
+      std::cout << "Entering function " << __func__ << std::endl;
+      return number1 + number2;
+      }
+\end{verbatim}
+\section{Alternative Function Syntax}
+Since C++11, an alternative function syntax is supported with a \textit{trailing return type}. This new
+syntax is not much use for ordinary functions, but is very useful in the context of specifying the
+return type of template functions.
+\begin{verbatim}
+      auto func(int i) -> int
+      {
+          return i + 2;
+      }
+\end{verbatim}
+The return type of the function is no longer at the beginning, but at the end of th eline after the arrow.
+main() can also use this syntax.
+\section{Function Return Type Deduction}
+C++14 allows you to ask the compiler to figure out the return type of a function automatically. To make
+use of this, specify auto as the return type and omit any trailing return type
+\begin{verbatim}
+      auto divideNumbers(double numerator, double denominator)
+      {
+          if (denominator == 0) {/*...*/}
+          return numerator / denominator;
+      }
+\end{verbatim}
+Compiler deduces the return type based on the expressions used for the return statements. Multiple
+returns should resolve to the same type.
+\end{document}
