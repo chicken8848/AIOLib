@@ -1,0 +1,32 @@
+\setlength\parindent{0pt}
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{txfonts}
+\usepackage{MnSymbol}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{fancyvrb}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\begin{document}
+\section{References}
+Attaching \& to a type indicates that the variable is a reference. Here are two implementations of an
+addOne() function. The first will have no effect on the variable that is passed in because it is passed
+by value. The second uses a reference and thus changes the original variable.
+\begin{verbatim}
+         void addOne(int i){
+                i++; // Has no real effect because this is a copy of the original
+         }
+         void addOne(int& i) {
+                i++; // Actually changes the original variable
+         }
+\end{verbatim}
+The syntax for the call to the addOne() function with an integer reference is no different than if
+the function just took an integer.
+\begin{verbatim}
+         int myInt = 7;
+         addOne(myInt);
+\end{verbatim}
+\end{document}
