@@ -1,7 +1,5 @@
-#include <iostream>
-#include <stdio.h>
-
-void insertion_sort(int s[], int n) {
+#include <algorithm>
+template <class T> void insertion_sort(T *s[], int n) {
   int i, j;
 
   for (i = 1; i < n; i++) {
