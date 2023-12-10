@@ -211,11 +211,11 @@ as a point in a plane.
 it makes multiplication trivial to remember.
 \subsection{The usual stuff}
 Does it satisfy the usual rules:
-\begin{equation}
+\begin{equation*}
 	a(b+c) = ab+ac
 	(ab)c = a(bc)
 	\cdots
-\end{equation}
+\end{equation*}
 Well we could
 \begin{enumerate}
 	\item Do a long check which we won't do because its long and tedious
@@ -238,17 +238,164 @@ you can say about 1 squareroot you can say about the other squareroot.
 So you can sort of flip them around without changing anything. Complex
 conjugation actually \textit{preserves} all properties of the complex
 numbers. For example:
-\begin{gather}
+\begin{gather*}
 	\overline{z_{1}z_{2}} = \overline{z_1} \cdot \overline{z_2} \\
 	\overline{z_{1}+z_{2}} = \overline{z_1} + \overline{z_2}
-\end{gather}
+\end{gather*}
 In fact, complex conjugation $z \rightarrow \overline{z}$ is an \textit{AUTOMORPHISM}
 of the complex numbers, $\mathbb{C}$. If you've done a Galois Theory course, another way
-of saying is this is the Galois group of the $\mathbb{C}/\mathbb{R}$ is $\{1,-\}$.
+of saying is this is the Galois group of the $\mathbb{C}/\mathbb{R}$ is
+$\{1,\text{Complex Conjugation}\}$.
 
 \noindent \\ So using complex conjugation, we can find the inverse of any
 complex number as follows
+\begin{align*}
+	z              & = x+iy                                           \\
+	z \overline{z} & = (x+iy)(x-iy)                                   \\
+	               & = x^{2}+y^{2}                                    \\
+	\frac{1 }{z }  & = \frac{\overline{z}}{z\overline{z}}             \\
+	\frac{1}{x+iy} & = \frac{x-iy}{(x+iy)(x-iy)}                      \\
+	               & = \frac{x-iy}{x^{2}+y^{2}}                       \\
+	               & = \frac{x}{x^{2}+y^{2}} - i\frac{y}{x^{2}+y^{2}}
+\end{align*}
+What you should remember is to multiply the denominator by its complex conjugate. Division by complex
+numbers is also reasonably easy.
 
+\subsubsection{Absolute Value}
+The absolute distance of $x$ from 0 is $x$ if $x>0$ and $-x$ if $(x<0)$. Similarly, for any complex
+number $z$,
+\begin{align*}
+	z   & = x+iy                 \\
+	|z| & = \sqrt{x^{2}+y^{2}}   \\
+	    & = \sqrt{z\overline{z}}
+\end{align*}
+From this, then the following also follows,
+\begin{gather*}
+	|z_{1}z_{2}| = |z_{1}||z_{2}|
+\end{gather*}
+All the rules of absolute value also applies,
+\begin{gather*}
+	|z_{1}-z_{2}| \leq |z_{1}| + |z_{2}|
+\end{gather*}
+\subsubsection{Application for Complex Arithmetic}
+Which integers are sums of 2 squares? Well we know that they are
+closed under multiplication. Meaning that if two integers are the sum of two squares then so is
+their product.
+\begin{proof}
+	Let's say we have two integers that are the some of two squares, then
+	\begin{displaymath}
+		(a^2+b^2)(c^2+d^2) = (ac-bd)^2 + (ad+bc)^2
+	\end{displaymath}
+	Well where on earth did this come from? It comes from complex numbers!
+	We notice that
+	\begin{align*}
+		a^2+b^2            & = |a+ib|^2              \\
+		c^2+d^2            & = |c+id|^2              \\
+		(a^2+b^2)(c^2+d^2) & = |(a+ib)(c+id)|^2      \\
+		                   & = |ac-bd + i(ad+bc)|^2  \\
+		                   & = (ac-bd)^2 + (ad+bc)^2
+	\end{align*}
+\end{proof}
+\noindent The proof with reals doesn't really explain why it exists, it is explained with
+complex numbers.
+\begin{proof}
+	Let's give an example of this
+	\begin{align*}
+		5           & = 1^2 + 2^2     \\
+		13          & = 2^2 + 3^2     \\
+		5 \times 13 & = 65            \\
+		            & = 8^{2} + 1^{2} \\
+		            & = 4^{2} + 7^{2}
+	\end{align*}
+	So why are there two ways to write 65 as a sum of two squares?
+	\begin{align*}
+		1^{2} + 2^{2} & = |1+2i|^2 \\
+		2^2 + 3^2     & = |2+3i|^2 \\
+		(1+2i)(2+3i)  & = -4 + 7i  \\
+	\end{align*}
+	And you get the first solution, which is actually $(-4)^2 + 7^2$. There's another thing you can do
+	which is change one of them to their complex conjugate
+	\begin{align*}
+		(1+2i)(2-3i) & = 8 + i \\
+	\end{align*}
+	And there are other things we could do like use the conjugate for the other complex number but it
+	will just give variations of the two solutions. So we see that the two ways of writing 65 as a sum
+	of two squares correspond to the two different products of complex numbers.
+\end{proof}
+Next application, let's take a look at pythogoras' theorem, $a^2+b^2=c^2$. And we want to find solutions
+to this equation. How can we generate many solutions to this easily?
+\begin{align*}
+	(a+ib) & = (x+iy)^2     \\
+	|a+ib| & = a^2 +b^2     \\
+	       & = |(x+iy)^2|^2 \\
+	       & = (x^2+y^2)^2  \\
+\end{align*}
+So now we can just sort of pick any random complex number for $x$ and $y$,
+\begin{align*}
+	x + iy       & = 2+i                    \\
+	(x+iy)^2     & = (2+i)^2                \\
+	             & = 3+4i                   \\
+	             & = a+ib                   \\
+	|a+ib|^2     & = a^2+b^2                \\
+	             & = 3^2+4^2                \\
+	|(x+iy)^2|^2 & = (|(x+iy)|^2)^2         \\
+	             & = ((\sqrt{2^2+1^2})^2)^2 \\
+	             & = 5^2
+\end{align*}
+\subsubsection{Hamilton Quaternions}
+Quaternions means a collection of 4 things. so a quarternion is simply
+\begin{gather*}
+	a + bi + cj + dk \\
+	i^2 = -1\\
+	j^2 =-1 \\
+	k^2 = -1 \\
+	ij = k = -ji \\
+	jk = i = -kj \\
+	ki = j = -ik \\
+\end{gather*}
+Quaternions are not commutative! But they do behave very similarly to complex numbers. For example,
+\begin{align*}
+	z                           & = a + bi + cj + dk      \\
+	\overline{a + bi + cj + dk} & = a-bi-cj-dk            \\
+	z\overline{z}               & = a^2 + b^2 + c^2 + d^2
+\end{align*}
+So now we can work out the inverse of the quarternion,
+\begin{gather*}
+	\frac{1}{a+bi+cj+dk} = \frac{a-bi-cj-dk}{a^2+b^2+c^2+d^2} \\
+\end{gather*}
+You realise that if the quarternion is non-zero, then the denominator would be non-zero, so all
+non-zero quarternions have inverses.
+\section{Roots}
+Do Complex Numbers have square roots?
+Can we find
+\begin{gather*}
+	\sqrt{2+i} \\
+	\sqrt[3]{2+i} \\
+	\cdots
+\end{gather*}
+The answer is YES! To understand this, we have to understand the geometric meaning of multiplication.
+To do this, we express multiplication in terms of polar coordinates.
 
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+				legend pos=outer north east,
+				title=,
+				xmin=-3, xmax=3,
+				ymin=-3, ymax=3,
+				axis lines=middle,
+				xlabel = $x$,
+				ylabel = $i$,
+				variable = x,
+				trig format plots = rad,
+			]
+			\draw (axis cs: 0, 0) circle [radius=1];
+			\fill (1,0) circle[radius = 2pt] node[above right]{$(1,0)$};
+			\fill (0,1) circle[radius = 2pt] node[above right]{$(0,i)$};
+			\fill (0,-1) circle[radius = 2pt] node[below right]{$(0,-i)$};
+			\fill (-1,0) circle[radius = 2pt] node[above right]{$(-1,0)$};
 
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
 \end{document}

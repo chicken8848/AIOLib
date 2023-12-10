@@ -9,3 +9,7 @@
 \contentsline {subsection}{\numberline {2.1}The usual stuff}{6}{}%
 \contentsline {subsection}{\numberline {2.2}Division}{6}{}%
 \contentsline {subsubsection}{\numberline {2.2.1}Complex Conjugation}{6}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Absolute Value}{7}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}Application for Complex Arithmetic}{8}{}%
+\contentsline {subsubsection}{\numberline {2.2.4}Hamilton Quaternions}{9}{}%
+\contentsline {section}{\numberline {3}Roots}{10}{}%
