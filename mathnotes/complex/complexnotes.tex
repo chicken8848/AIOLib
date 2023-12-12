@@ -1,6 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx}
 \graphicspath{./diagrams}
+\usepackage{mathtools}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -379,6 +380,7 @@ To do this, we express multiplication in terms of polar coordinates.
 \begin{center}
 	\begin{tikzpicture}
 		\begin{axis}[
+				clip=false,
 				legend pos=outer north east,
 				title=,
 				xmin=-3, xmax=3,
@@ -394,8 +396,39 @@ To do this, we express multiplication in terms of polar coordinates.
 			\fill (0,1) circle[radius = 2pt] node[above right]{$(0,i)$};
 			\fill (0,-1) circle[radius = 2pt] node[below right]{$(0,-i)$};
 			\fill (-1,0) circle[radius = 2pt] node[above right]{$(-1,0)$};
-
+			\fill (2,2) circle[radius = 2pt] node[above right]{$z=x+iy$};
+			\draw (0,0)--(2,2);
+			\draw (0.4,0) arc (0:45:0.4) node[right]{$\theta$};
 		\end{axis}
 	\end{tikzpicture}
 \end{center}
+We have the usual way to go about changing from cartesian to
+polar coordinates.
+\begin{gather*}
+	r = |z| \\
+	tan\theta = \frac{y}{x}\\
+	x = rcos\theta \\
+	y = rsin\theta \\
+\end{gather*}
+Now you notice if we take the values of absolute value one (the circle),
+these actually form a group. A \textbf{group} is a set that is closed under
+multiplication and inverses. For example,
+\begin{gather*}
+	|z_1| = 1 \\
+	|z_2| = 1 \\
+	|z_1 z_2| = 1 \\
+	|z^{-1}| = 1 \\
+\end{gather*}
+So we can multiply and divide points on the circle group. We also see that
+any complex number $z$, can be written as a point on the circle group,
+times a positive real number.
+\begin{align*}
+	\text{Point on the circle group: } & cos\theta + isin\theta               \\
+	\text{Any Complex Number: }        & z = r \cdot (cos\theta + isin\theta)
+\end{align*}
+Every non-zero complex number $z$, can be written \textit{uniquely} as
+$z = a \cdot b$ where $a$ is a positive real, and $b$ is in the circle group ($|b| = 1$).
+Another way of writing this is $\mathbb{C}^{x} \coloneqq \mathbb{R}_{>0} \times \mathbb{S}^{1}$, where
+$\mathbb{C}^{x}$ means take the complex numbers under multiplication and throw away the zero, positive
+reals, and the circle group where $\mathbb{S}$ means sphere and the superscript means it is one-dimension.
 \end{document}

@@ -14,4 +14,29 @@ Employee &Database::addEmployee(const string &firstName,
   mEmployees.push_back(theEmployee);
   return mEmployees[mEmployees.size() - 1];
 }
+Employee &Database::getEmployee(int employeeNumber) {
+  for (auto &employee : mEmployees) {
+    if (employee.getEmployeeNumber() == employeeNumber) {
+      return employee;
+    }
+  }
+  throw runtime_error("No employee found.");
+}
+void Database::displayAll() const {
+  for (const auto &employee : mEmployees) {
+    employee.display();
+  }
+}
+void Database::displayCurrent() const {
+  for (const auto &employee : mEmployees) {
+    if (employee.getIsHired())
+      employee.display();
+  }
+}
+void Database::displayFormer() const {
+  for (const auto &employee : mEmployees) {
+    if (!employee.getIsHired())
+      employee.display();
+  }
+}
 } // namespace Records

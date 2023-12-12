@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1702196809 "complexnotes.tex" "complexnotes.pdf" "complexnotes" 1702196811 0
+["pdflatex"] 1702267538 "complexnotes.tex" "complexnotes.pdf" "complexnotes" 1702267538 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1689853683 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1689853683 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -160,6 +160,8 @@
   "/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty" 1689853683 6107 5cfea8a675c58918b8c04be10261e48c ""
   "/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty" 1689853683 6812 3c152a1c8d562d7b7291c4839b61a5c3 ""
   "/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1689853683 678 4792914a8f45be57bb98413425e4c7af ""
+  "/usr/share/texmf-dist/tex/latex/mathtools/mathtools.sty" 1689853683 62269 5c1837a5bc5db4c0d255eedc225ca44b ""
+  "/usr/share/texmf-dist/tex/latex/mathtools/mhsetup.sty" 1689853683 5582 a43dedf8e5ec418356f1e9dfe5d29fc3 ""
   "/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty" 1689853683 1090 bae35ef70b3168089ef166db3e66f5b2 ""
   "/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty" 1689853683 373 00b204b1d7d095b892ad31a7494b0373 ""
   "/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty" 1689853683 21013 f4ff83d25bb56552493b030f27c075ae ""
@@ -172,13 +174,14 @@
   "/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty" 1689853683 325 f9f16d12354225b7dd52a3321f085955 ""
   "/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty" 1689853683 4904 ee78b44e85d6fccf08cd99370557481e ""
   "/usr/share/texmf-dist/tex/latex/physics/physics.sty" 1689853683 29610 a9597219b282d9c78b02393dcd7d4322 ""
+  "/usr/share/texmf-dist/tex/latex/tools/calc.sty" 1689853683 10214 de3e21cfc0eccc98ca7f8dac0ef263d2 ""
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1689853683 56148 51a9a8571c07b9921892ae11063ae853 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1692970188 4482925 a1a254cacf5c7108f7b28226c8f3b19f ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1699895922 6768061 ce4d83b6002faba598e77c06e2baceda ""
-  "complexnotes.aux" 1702196811 1705 c0e54308ae594fa7614c6ca0febce11e "pdflatex"
-  "complexnotes.tex" 1702196808 15849 6751709519baa16a2ee75ab5504410ee ""
-  "complexnotes.toc" 1702196811 1057 eb3c8689e742c901fcf9d62a0febb0b1 "pdflatex"
+  "complexnotes.aux" 1702267538 1705 e0beec36f7cddb6f03be8eca05850ddb "pdflatex"
+  "complexnotes.tex" 1702267536 17332 b8d375cdfdc63b5349fa5545c21f3b9e ""
+  "complexnotes.toc" 1702267538 1057 eb3c8689e742c901fcf9d62a0febb0b1 "pdflatex"
   (generated)
   "complexnotes.aux"
   "complexnotes.log"
