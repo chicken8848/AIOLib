@@ -384,7 +384,7 @@ To do this, we express multiplication in terms of polar coordinates.
 				legend pos=outer north east,
 				title=,
 				xmin=-3, xmax=3,
-				ymin=-3, ymax=3,
+				ymin=-2.5, ymax=2.5,
 				axis lines=middle,
 				xlabel = $x$,
 				ylabel = $i$,
@@ -431,4 +431,155 @@ $z = a \cdot b$ where $a$ is a positive real, and $b$ is in the circle group ($|
 Another way of writing this is $\mathbb{C}^{x} \coloneqq \mathbb{R}_{>0} \times \mathbb{S}^{1}$, where
 $\mathbb{C}^{x}$ means take the complex numbers under multiplication and throw away the zero, positive
 reals, and the circle group where $\mathbb{S}$ means sphere and the superscript means it is one-dimension.
+
+\subsection{Multiplication in $S^1$}
+There are two ways to do multiplication in $S^1$, namely,
+\begin{enumerate}
+	\item Mutiply them as complex numbers.
+	\item Multiply them by adding angles.
+\end{enumerate}
+And we want to show that they are the same.
+\begin{proof}
+	Complex multiplication:
+	\begin{gather*}
+		(cos\theta_1+isin\theta_1) \times (cos\theta_2+isin\theta_2) \\
+		= cos\theta_1 cos\theta_2 - sin\theta_1 sin\theta_2 + i(cos\theta_1 sin\theta_2 + cos\theta_2 sin\theta_1)
+	\end{gather*}
+	Similarly for the addition of angles,
+	\begin{gather*}
+		cos(\theta_1 + \theta_2) = cos\theta_1 cos\theta_2 - sin\theta_1 sin\theta_2 \\
+		sin(\theta_1 + \theta_2) = sin\theta_1 cos\theta_2 + cos\theta_1 sin\theta_2
+	\end{gather*}
+	So multiplying the complex numbers on the circle, is the same as adding their angles.
+\end{proof}
+\noindent This shows that complex numbers are really good for rotations in $\mathbb{R}^2$. Similarly
+quarternions are really good for rotations of $\mathbb{R}^3$ and $\mathbb{R}^4$. Navigation systems
+often make use of quarternions to calculate rotations.
+
+\subsubsection{Summary}
+To multiply two complex numbers $z_1, z_2$,
+\begin{enumerate}
+	\item Multiply absolute values
+	\item Add angles (argument)
+\end{enumerate}
+You can multiply complex numbers by just sort of staring at them, not much algebraic stuff needed.
+
+\subsection{Square Roots}
+So $\sqrt{z}$ simply has half the argument, $\theta$, and the absolute value $= \sqrt{|z|}$. This sort
+of shows that every complex number has a square root. Let's show this graphically.
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+				clip=false,
+				legend pos=outer north east,
+				title=,
+				xmin=-3, xmax=3,
+				ymin=-2.5, ymax=2.5,
+				axis lines=middle,
+				xlabel = $x$,
+				ylabel = $i$,
+				variable = x,
+				trig format plots = rad,
+			]
+			\draw (axis cs: 0, 0) circle [radius=1];
+			\fill (-1,2) circle[radius = 2pt] node[above right]{$z$};
+			\fill (0.78,1.27) circle[radius = 2pt] node[above right]{$\sqrt{z}$};
+			\draw (0,0)--(-1,2);
+			\draw (0,0)--(0.78,1.27);
+			\draw (0.4,0) arc (0:116.56:0.4) node[above]{$\theta$};
+			\draw (0.5,0) arc (0:58.28:0.5) node[right]{$\theta/2$};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+We notice that $\sqrt{z}$ has half the argument of $z$, and the real part
+of $\sqrt{z}$ is $\sqrt{|z|}$. So the two square roots of $z$ are
+$\sqrt{z}$ and $-\sqrt{z}$.
+
+\subsection{Other Roots}
+Just as numbers have more than one square root, they have more thna
+one 5th root, so if we take $\frac{\theta}{5}$, we can also take $\frac{\theta + 2\pi}{5}$,
+$\frac{\theta+4\pi}{5}$ and so on...
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+				clip=false,
+				legend pos=outer north east,
+				title=,
+				xmin=-5, xmax=5,
+				ymin=-4, ymax=4,
+				axis lines=middle,
+				xlabel = $x$,
+				ylabel = $i$,
+				variable = x,
+				trig format plots = rad,
+			]
+			\draw (axis cs: 0, 0) circle [radius=1];
+			\draw (axis cs: 0, 0) circle [radius=1.36];
+			\fill (3,4) circle[radius = 2pt] node[above right]{$3+4i$};
+			\fill (1.36,0.25) circle[radius = 2pt] node[above right]{$\sqrt[5]{z}$};
+			\fill (0.18,1.37) circle[radius = 2pt] node[above right]{};
+			\fill (-1.25,0.59) circle[radius = 2pt] node[above right]{};
+			\fill (-0.95,-1.0) circle[radius = 2pt] node[above right]{};
+			\fill (0.66,-1.21) circle[radius = 2pt] node[above right]{};
+			\draw (1.36,0.25)--(0.18,1.37);
+			\draw (0.18,1.37)--(-1.25,0.59);
+			\draw (-1.25,0.59)--(-0.95,-1.0);
+			\draw (-0.95,-1.0)--(0.66,-1.21);
+			\draw (0.66,-1.21)--(1.36,0.25);
+			\draw (0,0)--(3,4);
+			\draw (0,0)--(1.36,0.25);
+			\draw (0.4,0) arc (0:53.13:0.4) node[above]{$\theta$};
+			\draw (0.5,0) arc (0:10.62:0.5) node[below]{$\theta/5$};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+The five roots lie on a regular pentagon. And the same happens if you take
+any nth roots of any non-zero complex number, you find that there are going to be
+n roots, and they lie on the vertices of a nice regular, n-sided polygon. And you
+can find out these values explicitly by working out the argument and absolute value of z.
+
+\noindent \\ So any complex number, $z$, has an n-th root. If $z$ is non-zero, it is going to have
+n distinct, n-th roots. So polynomials of the form $z^{n} - a$ always has root. The same happens
+for more complex polynomials, and will be shown later to always have a complex root. We sometimes
+express this by saying that $\mathbb{C}$ is algebraically closed. "algebraically closed" just means
+that whenever you have any non constant polynomial, you can always find a root of that polynomial.
+
+\subsection{Multiple Angle Formulas}
+Everyone is familiar with the old trusty angle formulas
+\begin{gather*}
+	cos2\theta = cos^2\theta - sin^2\theta \\
+	cos3\theta = cos^3\theta - 3cos\theta sin^2\theta = 4cos^3\theta - 3cos\theta
+\end{gather*}
+You \textit{could} prove these formulas by doing some tedious algebra, but with complex numbers, the
+work becomes a lot less. We get it from the binomial theorem,
+\begin{align*}
+	cosn\theta + isinn\theta & = (cos\theta + isin\theta)^n                                                                                       \\
+	                         & = \binom{n}{0}(cos\theta)^n + i\binom{n}{1}(cos\theta)^{n-1}sin\theta - \binom{n}{2}(cos\theta)^{n-2}(sin\theta)^2
+\end{align*}
+And then just take real parts of both sides.
+\begin{gather*}
+	cosn\theta = (cos\theta)^n - \binom{n}{2} (cos\theta)^{n-2}(sin\theta)^2 + \cdots
+\end{gather*}
+\section{Elementary Transcendental Functions}
+This section will discuss $e^x, log, sin, cos, tan,$ and so on... We will start with the exponential
+function, and see that all the others are just special cases of it.
+\subsection{Exponential}
+We can define the exponential function using the normal power series, as we do for over the reals,
+\begin{gather*}
+	e^z = 1 + z + \frac{z^2}{2!} + \frac{z^3}{3!} + \cdots
+\end{gather*}
+So we can ask the question, does this converge? Turns out it is absolutely convergent. And if a series
+of complex numbers are absolutely convergent, then so is the series of real parts, and the same for the
+imaginary parts.
+\begin{align*}
+	e^{z_1+z_2}                                    & = e^{z_1}e^{z_2}                                                     \\
+	\displaystyle\sum_{n}^{}\frac{(z_1+z_2)^n}{n!} & = \displaystyle\sum_{n,m}^{}\frac{\binom{n}{m}z_1^m z_2^{n-m}}{n!}   \\
+	                                               & = \displaystyle\sum_{n,m}^{}\frac{z_1^m}{m!}\frac{z_2^{n-m}}{(n-m)!} \\
+	                                               & = \displaystyle\sum_{n,m}^{}\frac{z_1^m}{m!}\frac{z_2^n}{n!}         \\
+	                                               & = e^{z_1}e^{z_2}
+\end{align*}
+You realise we did some rearrangement, but that's fine because everything is absolutely
+convergent.
 \end{document}

@@ -13,3 +13,10 @@
 \contentsline {subsubsection}{\numberline {2.2.3}Application for Complex Arithmetic}{8}{}%
 \contentsline {subsubsection}{\numberline {2.2.4}Hamilton Quaternions}{9}{}%
 \contentsline {section}{\numberline {3}Roots}{10}{}%
+\contentsline {subsection}{\numberline {3.1}Multiplication in $S^1$}{11}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}Summary}{12}{}%
+\contentsline {subsection}{\numberline {3.2}Square Roots}{12}{}%
+\contentsline {subsection}{\numberline {3.3}Other Roots}{13}{}%
+\contentsline {subsection}{\numberline {3.4}Multiple Angle Formulas}{13}{}%
+\contentsline {section}{\numberline {4}Elementary Transcendental Functions}{14}{}%
+\contentsline {subsection}{\numberline {4.1}Exponential}{14}{}%

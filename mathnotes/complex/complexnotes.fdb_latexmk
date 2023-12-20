@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1702267538 "complexnotes.tex" "complexnotes.pdf" "complexnotes" 1702267538 0
+["pdflatex"] 1703053094 "complexnotes.tex" "complexnotes.pdf" "complexnotes" 1703053095 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1689853683 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1689853683 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -28,6 +28,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1689853683 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1689853683 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1689853683 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1689853683 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1689853683 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1689853683 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1689853683 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -35,6 +36,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1689853683 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1689853683 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1689853683 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1689853683 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1689853683 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1689853683 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1689853683 32716 08e384dc442464e7285e891af9f45947 ""
@@ -177,11 +179,11 @@
   "/usr/share/texmf-dist/tex/latex/tools/calc.sty" 1689853683 10214 de3e21cfc0eccc98ca7f8dac0ef263d2 ""
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1689853683 56148 51a9a8571c07b9921892ae11063ae853 ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1692970188 4482925 a1a254cacf5c7108f7b28226c8f3b19f ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1699895922 6768061 ce4d83b6002faba598e77c06e2baceda ""
-  "complexnotes.aux" 1702267538 1705 e0beec36f7cddb6f03be8eca05850ddb "pdflatex"
-  "complexnotes.tex" 1702267536 17332 b8d375cdfdc63b5349fa5545c21f3b9e ""
-  "complexnotes.toc" 1702267538 1057 eb3c8689e742c901fcf9d62a0febb0b1 "pdflatex"
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1703041052 4482925 a1a254cacf5c7108f7b28226c8f3b19f ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1703041046 6768056 717048bd14cc16cde9f8a6c5431d5596 ""
+  "complexnotes.aux" 1703053095 2485 c7eb262742239b8ab6683c43a0443f89 "pdflatex"
+  "complexnotes.tex" 1703053093 24142 040b28d0eeb4b8eab2e447af4d63b2df ""
+  "complexnotes.toc" 1703053095 1550 6c402fb5d13a8072421070e0ce5d9fd4 "pdflatex"
   (generated)
   "complexnotes.aux"
   "complexnotes.log"

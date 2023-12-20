@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1702007593 "mark.tex" "mark.pdf" "mark" 1702007593 0
+["pdflatex"] 1702522784 "mark.tex" "mark.pdf" "mark" 1702522785 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1689853683 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1689853683 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -43,8 +43,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1692970188 4482925 a1a254cacf5c7108f7b28226c8f3b19f ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1699895922 6768061 ce4d83b6002faba598e77c06e2baceda ""
-  "mark.aux" 1702007593 1951 cbd2a6aee2333e0439517ffbe9dd242b "pdflatex"
-  "mark.tex" 1702007590 20691 07b3ddca883a78146d549ac557ca88f5 ""
+  "mark.aux" 1702522785 2737 8bf79dc82567379e88d172e4e1207ad0 "pdflatex"
+  "mark.tex" 1702522784 26128 379850964f4593ec887bb18261fbdc95 ""
   (generated)
   "mark.aux"
   "mark.log"
