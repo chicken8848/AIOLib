@@ -20,3 +20,5 @@
 \contentsline {subsection}{\numberline {3.4}Multiple Angle Formulas}{13}{}%
 \contentsline {section}{\numberline {4}Elementary Transcendental Functions}{14}{}%
 \contentsline {subsection}{\numberline {4.1}Exponential}{14}{}%
+\contentsline {subsection}{\numberline {4.2}Logarithm}{15}{}%
+\contentsline {subsection}{\numberline {4.3}Trigonometric Functions}{16}{}%

@@ -581,5 +581,62 @@ imaginary parts.
 	                                               & = e^{z_1}e^{z_2}
 \end{align*}
 You realise we did some rearrangement, but that's fine because everything is absolutely
-convergent.
+convergent. So let's try now to calculate it,
+
+\begin{align*}
+	z      & = x+iy                                                                                   \\
+	e^z    & = e^x e^{iy}                                                                             \\
+	e^{iy} & = 1+iy+\frac{i^2y^2}{2!}+\frac{i^3y^3}{3!}+\cdots                                        \\
+	       & = 1 + iy - \frac{y^2}{2!}	 - \frac{iy^3}{3!} + \frac{y^4}{4!} + \frac{iy^5}{5!} + \cdots
+\end{align*}
+We realise that
+\begin{gather*}
+	1 - \frac{y^2}{2!} + \frac{y^4}{4!} + \cdots  = cosy \\
+	iy - \frac{iy^3}{3!} + \frac{iy^5}{5!} + \cdots = isiny
+\end{gather*}
+This brings us to Euler's identity, where $e^{iy} = cosy + isiny$. Which
+allows us to work out the exponential for all complex $z$. Also it
+follows that,
+\begin{gather*}
+	y = \pi \\
+	e^{\pi i} = -1 \\
+	y = 2 \pi \\
+	e^{2\pi i} = 1 \\
+	e^{2n\pi i} = 1, \text{ for } n \in \mathbb{Z}
+\end{gather*}
+\subsection{Logarithm}
+Solve: $e^{a + bi} = z$
+\begin{align*}
+	z      & = r(cos\theta + isin\theta) \\
+	a + bi & = logz                      \\
+	e^a    & = r                         \\
+	       & = |z|                       \\
+	a      & = log|z|, z \neq 0          \\
+	\theta & = arg(z)
+\end{align*}
+The problem is that $arg(z)$ is not unique, so $\theta$ is only defined
+up to multiples of $2\pi$. $log(z)$ NOT unique, only defined up to multiples
+of $2\pi i$.
+
+\noindent \\ We can also ask if,
+\begin{gather*}
+	z_1^{z_2} = exp(z_2 log(z_1))
+\end{gather*}
+Is well defined, since $log(z_1)$ is ambiguous, there are only 2 cases where this function is well
+defined.
+\begin{enumerate}
+	\item $z_1 > 0$ and REAL, take the real part of $log(z_1)$
+	\item $z_2$ is an integer, $exp(nlog(z_1)) = exp(n2\pi i) = 1$
+\end{enumerate}
+\subsection{Trigonometric Functions}
+\begin{gather*}
+	e^{iz} = cosz + isinz \\
+	e^{-iz} = cosz - isinz \\
+	\frac{e^{iz}+e^{-iz}}{2} = cosz \\
+	\frac{e^{iz}-e^{-iz}}{2i} = sinz
+\end{gather*}
+An amazing unification of exponential functions and trigonometric functions. In
+real analysis, they seem so different. Over the complex numbers, they seem like
+almost the same function. All identities of trigonometric functions also follow
+from the exponential functions.
 \end{document}
