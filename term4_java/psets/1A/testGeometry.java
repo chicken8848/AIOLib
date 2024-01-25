@@ -1,14 +1,5 @@
 public class testGeometry {
-  public static void main(String[] args) {
-
-    MyRectangle2D rectum_1 = new MyRectangle2D();
-    MyRectangle2D rectum_2 = new MyRectangle2D(0.5, 0.5);
-
-    System.out.println(rectum_1.contains(rectum_2));
-    System.out.println(rectum_1.overlaps(rectum_2));
-    System.out.println(rectum_1.contains(0.5, 0.5));
-    System.out.println(rectum_1.getArea());
-  }
+  public static void main(String[] args) {}
 }
 
 class MyRectangle2D {
@@ -18,70 +9,87 @@ class MyRectangle2D {
   private double height;
 
   MyRectangle2D() {
-    x = 0;
-    y = 0;
-    width = 1;
-    height = 1;
-  }
-
-  MyRectangle2D(double newX, double newY) {
-    x = newX;
-    y = newY;
-    width = 1;
-    height = 1;
+    this.x = 0;
+    this.y = 0;
+    this.width = 1;
+    this.height = 1;
   }
 
   /*
+  MyRectangle2D(double newX, double newY) {
+    this.x = newX;
+    this.y = newY;
+    this.width = 1;
+    this.height = 1;
+  }
+
   MyRectangle2D(double newWidth, double newHeight) {
-    x = 0;
+    this.x = 0;
     y = 0;
-    width = newWidth;
-    height = newHeight;
+    this.width = newWidth;
+    this.height = newHeight;
   }
   */
 
   MyRectangle2D(double newX, double newY, double newWidth, double newHeight) {
-    x = newX;
-    y = newY;
-    width = newHeight;
-    height = newHeight;
+    this.x = newX;
+    this.y = newY;
+    this.width = newWidth;
+    this.height = newHeight;
+  }
+
+  public void setX(double ex) {
+    this.x = ex;
+  }
+
+  public void sety(double ey) {
+    this.y = ey;
+  }
+
+  public double getX() {
+    return this.x;
+  }
+
+  public double getY() {
+    return this.y;
   }
 
   public double getWidth() {
-    return width;
+    return this.width;
   }
 
   public double getHeight() {
-    return height;
+    return this.height;
   }
 
-  public double setHeight(double newHeight) {
-    height = newHeight;
-    return y;
+  public void setHeight(double newHeight) {
+    this.height = newHeight;
   }
 
-  public double setWidth(double newWidth) {
-    width = newWidth;
-    return x;
+  public void setWidth(double newWidth) {
+    this.width = newWidth;
   }
 
   public double getArea() {
-    return height * width;
+    return this.width * this.height;
   }
 
   public double getParameter() {
-    return 2 * width + 2 * height;
+    return 2 * this.width + 2 * this.height;
   }
 
   public boolean contains(double x_2, double y_2) {
-    return (x + width >= x_2) && (y + height >= y_2);
+    return Math.abs(this.x - x_2) < 0.5 * this.width && Math.abs(this.y - y_2) < 0.5 * this.height;
   }
 
   public boolean contains(MyRectangle2D r) {
-    return (x <= r.x && y <= r.y && x + width >= r.x + r.width && y + height >= r.y + r.height);
+    return contains(r.x, r.y)
+        && (Math.abs(r.x - this.x) + 0.5 * r.x) <= (0.5 * this.width)
+        && (Math.abs(r.y - this.y) + 0.5 * r.y) <= (0.5 * this.height);
   }
 
   public boolean overlaps(MyRectangle2D r) {
-    return (x <= r.x || y <= r.y || x + width >= r.x + r.width || y + height >= r.y + r.height);
+    return Math.abs(r.x - this.x) <= r.width + this.width
+        && Math.abs(r.y - this.y) <= r.height + this.height;
   }
 }
