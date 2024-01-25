@@ -1,7 +1,15 @@
+import java.util.*;
+
 public class iterating {
   public static void main(String[] args) {
-    int[] d = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    int[] c = {1, 2, 3, 4, 5};
+    ArrayList<Integer> d = new ArrayList<Integer>();
+    for (int i = 0; i < 11; i++) {
+      d.add(i);
+    }
+    ArrayList<Integer> c = new ArrayList<Integer>();
+    for (int i = 0; i < 6; i++) {
+      c.add(i);
+    }
     int result = sumall(c);
     int result2 = sumall2(d);
     System.out.println("iterating with for loop over 1 - 5");
@@ -10,15 +18,16 @@ public class iterating {
     System.out.println(result2);
   }
 
-  public static int sumall(int[] args) {
+  public static int sumall(ArrayList<Integer> args) {
     int result = 0;
-    for (int i = 0; i < args.length; i++) {
-      result += args[i];
+    Iterator<Integer> it = args.iterator();
+    while (it.hasNext()) {
+      result += it.next();
     }
     return result;
   }
 
-  public static int sumall2(int[] args) {
+  public static int sumall2(ArrayList<Integer> args) {
     int result = 0;
     for (int i : args) {
       result += i;

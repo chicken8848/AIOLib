@@ -6,7 +6,7 @@ public class fibonacci {
     System.out.println("Input number for fibonacci");
     String input = myObj.nextLine();
     int num = Integer.parseInt(input);
-    int result = fibonacci(num);
+    String result = list_fibonacci(num);
     System.out.println(result);
   }
 
@@ -16,6 +16,19 @@ public class fibonacci {
     } else {
       return fibonacci(args - 1) + fibonacci(args - 2);
     }
+  }
+
+  public static String list_fibonacci(int args) {
+    int[] c = new int[args + 1];
+    c[0] = 0;
+    for (int i = 1; i < args + 1; i++) {
+      c[i] = fibonacci(i);
+    }
+    String message = "";
+    for (int num : c) {
+      message = message + num + ",";
+    }
+    return message.substring(0, message.length() - 1);
   }
 }
 ;
