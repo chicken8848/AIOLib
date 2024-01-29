@@ -1,8 +1,4 @@
-public class testGeometry {
-  public static void main(String[] args) {}
-}
-
-public class MyRectangle2D extends GeometricObject {
+public class MyRectangle2D {
   double x;
   double y;
   double width;

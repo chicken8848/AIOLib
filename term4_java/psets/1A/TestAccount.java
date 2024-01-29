@@ -3,17 +3,24 @@ import java.util.Date;
 public class TestAccount {
 
   public static void main(String[] args) {
-    Account account = new Account(1122, 20000);
 
-    Account.setAnnualInterestRate(4.5);
+    CheckingAccount myCheckAcc = new CheckingAccount(1024, 8000.0);
 
-    account.withdraw(2500);
+    myCheckAcc.deposit(2000);
 
-    account.deposit(3000);
+    myCheckAcc.withdraw(15000);
 
-    System.out.println("Balance is " + account.getBalance());
+    System.out.println(myCheckAcc.getBalance());
 
-    System.out.println("Monthly interest is " + account.getMonthlyInterest());
+    myCheckAcc.withdraw(200);
+
+    System.out.println(myCheckAcc.getBalance());
+
+    myCheckAcc.deposit(7000);
+
+    myCheckAcc.withdraw(200);
+
+    System.out.println(myCheckAcc.getBalance());
   }
 }
 
@@ -64,5 +71,40 @@ class Account {
 
   public double getMonthlyInterest() {
     return getMonthlyInterestRate() / 100 * balance;
+  }
+}
+
+class CheckingAccount extends Account {
+
+  private int id;
+  private double balance;
+  private static double annualInterestRate;
+  private Date dateCreated;
+
+  CheckingAccount() {
+    this.id = 0;
+    this.balance = 0;
+    annualInterestRate = 0;
+  }
+
+  // arg constructor
+  CheckingAccount(int x, double y) {
+    this.id = x;
+    this.balance = y;
+  }
+
+  CheckingAccount(int x, double y, double newInterest) {
+    this.id = x;
+    this.balance = y;
+    annualInterestRate = newInterest;
+  }
+
+  @Override
+  public void withdraw(double amount) {
+    if (this.balance - amount < 0) {
+      System.out.println("over limit");
+    } else {
+      this.balance = this.balance - amount;
+    }
   }
 }
