@@ -79,13 +79,18 @@ public class MyRectangle2D {
   }
 
   public boolean contains(MyRectangle2D r) {
-    return contains(r.x, r.y)
-        && (Math.abs(r.x - this.x) + 0.5 * r.x) <= (0.5 * this.width)
-        && (Math.abs(r.y - this.y) + 0.5 * r.y) <= (0.5 * this.height);
+    return (r.x - r.width / 2) >= (this.x - this.width / 2)
+        && (r.x + r.width / 2) <= (this.x + this.width / 2)
+        && (r.y - r.height / 2) >= (this.y - this.height / 2)
+        && (r.y + r.height / 2) <= (this.y + this.height / 2);
   }
 
   public boolean overlaps(MyRectangle2D r) {
-    return Math.abs(r.x - this.x) <= r.width + this.width
-        && Math.abs(r.y - this.y) <= r.height + this.height;
+    double distanceX = Math.abs(r.x - this.x);
+    double distanceY = Math.abs(r.y - this.y);
+    double sumWidth = (r.width + this.width) / 2;
+    double sumHeight = (r.height + this.height) / 2;
+
+    return distanceX <= sumWidth && distanceY <= sumHeight;
   }
 }
