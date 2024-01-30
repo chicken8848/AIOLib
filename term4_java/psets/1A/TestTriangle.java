@@ -1,0 +1,10 @@
+public class TestTriangle {
+  public static void main(String[] args) {
+    Triangle myTri = new Triangle();
+    System.out.println(myTri);
+
+    Triangle myTri2 = new Triangle(2.0, 4.0, 5.5);
+    System.out.println(myTri2);
+    System.out.println("area : " + myTri2.getArea() + " perimeter: " + myTri2.getPerimeter());
+  }
+}

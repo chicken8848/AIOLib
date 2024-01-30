@@ -75,36 +75,27 @@ class Account {
 }
 
 class CheckingAccount extends Account {
-
-  private int id;
-  private double balance;
-  private static double annualInterestRate;
-  private Date dateCreated;
+  private static final double OVERDRAFT = 5000;
 
   CheckingAccount() {
-    this.id = 0;
-    this.balance = 0;
-    annualInterestRate = 0;
+    super();
   }
 
   // arg constructor
   CheckingAccount(int x, double y) {
-    this.id = x;
-    this.balance = y;
+    super(x, y);
   }
 
   CheckingAccount(int x, double y, double newInterest) {
-    this.id = x;
-    this.balance = y;
-    annualInterestRate = newInterest;
+    super(x, y, newInterest);
   }
 
   @Override
   public void withdraw(double amount) {
-    if (this.balance - amount < 0) {
+    if (amount > getBalance() + OVERDRAFT) {
       System.out.println("over limit");
     } else {
-      this.balance = this.balance - amount;
+      super.withdraw(amount);
     }
   }
 }
