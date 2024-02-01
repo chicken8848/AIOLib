@@ -1,5 +1,4 @@
 def mergeSort(arr):
-    inversions = 0
     if len(arr) > 1:
 
     # Finding the mid of the array
@@ -12,10 +11,10 @@ def mergeSort(arr):
         R = arr[mid:]
 
         # Sorting the first half
-        inversions += mergeSort(L)
+        mergeSort(L)
 
         # Sorting the second half
-        inversions += mergeSort(R)
+        mergeSort(R)
 
         i = j = k = 0
 
@@ -29,7 +28,6 @@ def mergeSort(arr):
                 arr[k] = R[j]
                 j += 1
                 k += 1
-                inversions = inversions + len(L) - i
 
         # Checking if any element was left
         while i < len(L):
@@ -41,10 +39,9 @@ def mergeSort(arr):
             arr[k] = R[j]
             j += 1
             k += 1
-    return inversions
 
 
 array = [10,9,11,12,7,1,8] 
 array2 = [10,2,6,8,17,19]
-print(mergeSort(array2))
-print(array2)
+print(mergeSort(array))
+print(array)
