@@ -39,9 +39,3 @@ def mergeSort(arr):
             arr[k] = R[j]
             j += 1
             k += 1
-
-
-array = [10,9,11,12,7,1,8] 
-array2 = [10,2,6,8,17,19]
-print(mergeSort(array))
-print(array)
