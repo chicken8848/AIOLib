@@ -1,3 +1,4 @@
+#include "heap.h"
 #include "my_algos.h"
 #include <array>
 #include <iostream>
@@ -9,8 +10,10 @@ template <typename T> void print_array(T a) {
 }
 
 int main() {
-  std::array<int, 6> arr = {9, 0, 8, 62, 5, 4};
+  std::vector<int> arr = {9, 0, 8, 62, 5, 4};
   print_array(&arr);
-  my_algos::selection_sort(arr, 6);
-  print_array(&arr);
+  heap::Heap<int> myHeap(arr);
+  int j = myHeap.extract_max();
+  std::cout << j << std::endl;
+  myHeap.show();
 }
