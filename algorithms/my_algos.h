@@ -29,5 +29,6 @@ template <typename T> void selection_sort(T &s, int n) {
     s[min] = buffer;
   };
 };
+template <class T> T heap() {}
 
 } // namespace my_algos

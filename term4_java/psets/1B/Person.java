@@ -10,21 +10,26 @@ public class Person {
     this.gender = gen;
     this.sharingConsent = shar;
   }
+
   public int getAge() {
     return this.age;
   }
-  public void getAge(int args) {
-    this.age = args;
+
+  public void setAge(int value) {
+    if (value > 0) {
+      this.age = value;
+    }
   }
+
   public String getName() {
-    if (this.getsharingConsent()) {
-    return this.name;
-    }
-    else {
-      return "Anonymous"
+    if (this.getSharingConsent()) {
+      return this.name;
+    } else {
+      return "Anonymous";
     }
   }
-  public boolean getsharingConsent() {
+
+  public boolean getSharingConsent() {
     return sharingConsent;
   }
 }
