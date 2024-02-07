@@ -16,18 +16,14 @@ public class BaseInteger {
   }
 
   private void convertRepresentationToArray() {
-    String[] temp_array = this.representation.split("");
+    String[] temp_array = this.representation.split(",");
     ArrayList<String> valid_inp = new ArrayList<String>();
     for (int i = 0; i < 10; i++) {
       valid_inp.add(String.valueOf(i));
     }
-    int j = 0;
-    this.digits = new int[representation.length() / 2 + 1];
-    for (int i = 0; i < representation.length(); i++) {
-      if (valid_inp.contains(temp_array[i])) {
-        this.digits[j] = Integer.parseInt(temp_array[i]);
-        j++;
-      }
+    this.digits = new int[temp_array.length];
+    for (int i = 0; i < temp_array.length; i++) {
+      this.digits[i] = Integer.parseInt(temp_array[i]);
     }
   }
 
@@ -62,7 +58,6 @@ public class BaseInteger {
       rem = result % base;
       stored_rem.add(0, rem);
       result = Math.floorDiv(result, base);
-      System.out.println(showinString(stored_rem));
     }
     return showinString(stored_rem);
   }
