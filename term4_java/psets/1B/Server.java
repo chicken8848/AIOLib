@@ -82,7 +82,7 @@ public class Server {
     // 3. Concatenate characters into string
     // 4. Return the decrypted string message
 
-    for (BigInteger c : decryptedIntMessage) {
+    for (BigInteger c : encryptedIntMessage) {
       BigInteger m = c.modPow(exponent, modulus);
       int v = m.intValue();
       char ch = (char) v;
