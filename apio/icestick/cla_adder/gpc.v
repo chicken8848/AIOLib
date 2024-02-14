@@ -10,10 +10,8 @@ module gpc (
   output cl
 );
 
-always @*  begin
-  ghl <= gh | (ph & gl);
-  phl <= ph & pl;
-  ch <= gl | (pl &cin);
-  cl <= cin;
-end
+  assign ghl = gh | (ph & gl);
+  assign phl = ph & pl;
+  assign ch = gl | (pl &cin);
+  assign cl = cin;
 endmodule

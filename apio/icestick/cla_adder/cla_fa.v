@@ -7,10 +7,8 @@ module cla_fa (
   output g
 );
 
-always @* begin
-  s <= a^b^cin;
-  p <= a^b;
-  g <= a&b;
+ assign s = a^b^cin;
+ assign p = a^b;
+ assign g = a&b;
 
-end
 endmodule

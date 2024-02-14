@@ -4,17 +4,20 @@
 
 namespace bst {
 
-class node {};
+class node {
+private:
+public:
+};
 
-template <class T> class bst {
+template <typename T> class bst {
 private:
   std::vector<node> arr;
-  node root;
+  T root;
 
 public:
   bst(std::vector<node> &args) {}
-  void tree_insertion(node k) {
-    node y = find_parent(k);
+  void tree_insertion(T k) {
+    T y = find_parent(k);
     k.parent = y;
     if (arr.root == NULL) {
       arr.root = k;
@@ -25,8 +28,8 @@ public:
     }
   }
   T find_parent(T k) {
-    node y;
-    node z = root;
+    T y;
+    T z = root;
     while (z != NULL) {
       y = z;
       if (k < z) {
