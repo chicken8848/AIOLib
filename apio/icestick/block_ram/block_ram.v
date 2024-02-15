@@ -1,5 +1,7 @@
 // Inferred block RAM
-module memory (
+module memory #(
+  parameter INIT_FILE = ""
+) (
   // inputs
   input clk,
   input w_en,
@@ -25,5 +27,10 @@ always @ (posedge clk) begin
   if (r_en == 1'b1) begin
     r_data <= mem[r_addr];
   end
+end
+
+// initialization (if available)
+initial if (INIT_FILE) begin
+  $readmemh(INIT_FILE, mem);
 end
 endmodule
