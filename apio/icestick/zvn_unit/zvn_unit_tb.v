@@ -1,6 +1,6 @@
 module zvn_unit_tb ();
 
-localparam WIDTH = 3;
+localparam WIDTH = 16;
 
 reg [WIDTH - 1:0] reg1;
 reg [WIDTH - 1:0] reg2;
@@ -41,30 +41,24 @@ compare_unit c_unit (
 );
 
 initial begin 
-  reg1 = 1;
-  reg2 = 2;
-  alu_fn[0] = 1;
-  alu_fn[2:1] = 'b01;
-  #10;
-  reg1 = 3;
-  reg2 = 2;
-  alu_fn[0] = 1;
-  alu_fn[2:1] = 'b01;
-  #10;
-  alu_fn[2:1] = 'b11;
-  #10;
-  reg1 = 'b010;
-  reg2 = 'b011;
+  reg1 = 'h0101;
+  reg2 = 'h0011;
   alu_fn[0] = 1;
   alu_fn[2:1] = 'b10;
   #10;
-  reg1 = 'b111;
-  reg2 = 'b001;
-  alu_fn[0] = 1;
+  reg1 = 'hC0FF;
+  reg2 = 'hEECC;
   #10;
-  reg1 = 'b100;
-  reg2 = 'b001;
-  alu_fn[0] = 1;
+  reg1 = 'hA234;
+  reg2 = 'h8000;
+  alu_fn[2:1] = 'b10;
+  #10;
+  reg1 = 'hFFFF;
+  reg2 = 'h0001;
+  #10;
+  reg1 = 'hC0FF;
+  reg2 = 'hEECC;
+
 end
 initial begin
   $dumpfile("zvn_unit_tb.vcd");
