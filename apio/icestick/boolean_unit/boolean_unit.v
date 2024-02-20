@@ -1,3 +1,5 @@
+`include "../muxes/mux_4.v"
+
 module boolean_unit#(
   parameter WIDTH = 8
 ) (

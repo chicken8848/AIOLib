@@ -1,3 +1,5 @@
+`include "../muxes/mux_4.v"
+
 module compare_unit (
   input z,
   input n,
