@@ -6,15 +6,14 @@ module compare_unit (
   output b_o
 );
 
-reg result;
-assign b_o = result;
-
-always @(*) begin
-  case (alu_fn)
-    'b01: result = z;
-    'b10: result = n ^ v;
-    'b11: result = z|(n^v);
-  endcase
-end
+mux_4 mux (
+  .a(),
+  .b(z),
+  .c(n^v),
+  .d(z|(n^v)),
+  .s0(alu_fn[0]),
+  .s1(alu_fn[1]),
+  .out(b_o)
+);
 
 endmodule
