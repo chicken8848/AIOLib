@@ -1,3 +1,5 @@
+`include "../full_adder/full_adder.v"
+
 module carry_lookahead_adder #(
   parameter WIDTH = 8
 )

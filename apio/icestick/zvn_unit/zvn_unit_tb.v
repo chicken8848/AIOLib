@@ -1,6 +1,5 @@
 `include "../compare_unit/compare_unit.v"
 `include "../cla_adder/carry_lookahead_adder.v"
-`include "../cla_adder/full_adder.v"
 
 module zvn_unit_tb ();
 
