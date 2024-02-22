@@ -1,7 +1,7 @@
 `include "../full_adder/full_adder.v"
 
 module csa #(
-  parameter BITS = 8
+  parameter BITS = 64
 ) (
   input [BITS-1:0] x,
   input [BITS-1:0] y,

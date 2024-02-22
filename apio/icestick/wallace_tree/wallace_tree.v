@@ -2,6 +2,7 @@
 `include "../bitwise/bitwise.v"
 `include "../csa/csa.v"
 `include "../mul/mul.v"
+`include "../rdcla/rdcla.v"
 
 module WallaceTreeMul (A,B,C);
 
@@ -20,7 +21,7 @@ module WallaceTreeMul (A,B,C);
     generate
         for(i = 0; i < 32; i = i + 1)
         begin : and_loop
-            mul mul0(A, B[i], temp[i]);
+            mul #(.BITS(32)) mul0(A, B[i], temp[i]);
             assign temp1[i] = {{32{1'b0}}, temp[i]};
             assign AB[i] = temp1[i] << i;
         end
@@ -57,5 +58,8 @@ module WallaceTreeMul (A,B,C);
     csa ca29(c[26], c[21], {64{1'b0}}, s[28], c[28]);
     csa ca30(s[27], c[27], s[28], s[29], c[29]);
     csa ca31(c[28], s[29], c[29], s[30], c[30]);
+
+    RecursiveDoubling cla1(s[30][31:0],c[30][31:0],1'b0,C[31:0],cout);
+    RecursiveDoubling cla2(s[30][63:32],c[30][63:32],cout,C[63:32],cout1);
 
     endmodule
