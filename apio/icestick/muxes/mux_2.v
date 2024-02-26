@@ -1,8 +1,8 @@
-module mux_2 (D0, D1, S, Y);
+module mux_2 (a, b, s, out);
 
-output Y;
-input D0, D1, S;
+output out;
+input a, b, s;
 
-assign Y=(S)?D1:D0;
+assign out=(s)?b:a;
 
 endmodule

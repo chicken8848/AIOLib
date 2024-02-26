@@ -1,0 +1,29 @@
+[*]
+[*] GTKWave Analyzer v3.3.118 (w)1999-2023 BSI
+[*] Mon Feb 26 19:46:57 2024
+[*]
+[dumpfile] "/home/chicken8848/Documents/AIOLib/apio/icestick/alu/alu_tb.vcd"
+[dumpfile_mtime] "Mon Feb 26 19:46:27 2024"
+[dumpfile_size] 1461387
+[savefile] "/home/chicken8848/Documents/AIOLib/apio/icestick/alu/alu_tb.gtkw"
+[timestart] 0
+[size] 1123 1417
+[pos] -4 4
+*-7.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 245
+[signals_width] 126
+[sst_expanded] 1
+[sst_vpaned_height] 446
+@22
+alu_tb.alu_fn[5:0]
+@28
+alu_tb.n_out
+@22
+alu_tb.reg1[31:0]
+alu_tb.reg2[31:0]
+alu_tb.result[31:0]
+@28
+alu_tb.v_out
+alu_tb.z_out
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,3 +1,5 @@
+`include "../muxes/mux_2.v"
+
 module shifter #(
   parameter BITS = 32
 ) (
@@ -15,10 +17,10 @@ genvar i;
 
 // mux for pad
 mux_2 pad_mux (
-  .D0('b0),
-  .D1(a[BITS-1]),
-  .S(alufn[1]),
-  .Y(pad)
+  .a(1'b0),
+  .b(a[BITS-1]),
+  .s(alufn[1]),
+  .out(pad)
 );
 
 // Generate SHL

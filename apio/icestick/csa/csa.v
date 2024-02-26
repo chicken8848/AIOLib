@@ -1,5 +1,3 @@
-`include "../full_adder/full_adder.v"
-
 module csa #(
   parameter BITS = 64
 ) (
