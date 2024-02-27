@@ -21,7 +21,8 @@ module alu #(
     output v
 );
 wire [WIDTH-1:0] adder_result;
-wire [2*WIDTH-1:0] mu_mul;
+wire [63:0] mu_mul;
+wire [WIDTH-1:0] mul_out;
 wire [WIDTH-1:0] m1_out;
 wire [WIDTH-1:0] shft_out;
 wire [WIDTH-1:0] b_out;
@@ -36,7 +37,8 @@ assign z = z_out;
 assign v = v_out;
 assign n = n_out;
 
-x_bit_mux_2 #(.WIDTH(WIDTH)) m1(.s(alufn[1]), .a(adder_result), .b(mu_mul[WIDTH-1:0]), .out(m1_out));
+x_bit_mux_2 #(.WIDTH(WIDTH)) mul_mux(.s(alufn[0]), .a(mu_mul[WIDTH-1:0]), .b(mu_mul[2*WIDTH-1:WIDTH]), .out(mul_out));
+x_bit_mux_2 #(.WIDTH(WIDTH)) m1(.s(alufn[1]), .a(adder_result), .b(mul_out), .out(m1_out));
 x_bit_mux_4 #(.WIDTH(WIDTH)) m2(.s0(alufn[4]), .s1(alufn[5]), .a(m1_out), 
   .b(b_out), .c(shft_out), .d(cmp_out), .out(out));
 boolean_unit #(.WIDTH(WIDTH)) b_u (.a(a), .b(b), .alufn_sig(alufn[3:0]), .out(b_out));

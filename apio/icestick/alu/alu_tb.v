@@ -69,6 +69,11 @@ initial begin
   reg1 = 'h3321_FFFF;
   reg2 = 'h0476_FFFF;
   #10;
+  // check mulhu
+  alu_fn = 6'b000011;
+  reg1 = 'h3321_FFFF;
+  reg2 = 'h0476_FFFF;
+  #10;
   // Check AND
   alu_fn = 'h18;
   // zeroes and ones

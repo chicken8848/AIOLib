@@ -34,7 +34,7 @@ end
 
 
 initial begin
-  $dumpfile("WTM_tb.vcd");
+  $dumpfile("wallace_tree_tb.vcd");
   $dumpvars(0, WTM_tb);
   // Wait for given amount of time for simulation to complete
   #(DURATION)
