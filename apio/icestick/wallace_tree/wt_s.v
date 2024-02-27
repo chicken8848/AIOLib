@@ -1,5 +1,3 @@
-`include "../cla_adder/carry_lookahead_adder.v"
-
 module wt_s (A,B,C,alufn);
 
   input [15:0] A, B;
@@ -22,7 +20,7 @@ module wt_s (A,B,C,alufn);
       begin : and_loop
           mul #(.BITS(16)) mul0(A, B[i], temp[i]);
           assign temp1[i] = {{16{1'b0}}, temp[i]};
-          assign AB[i] = temp1[i] << i;
+          assign AB[i] = {temp1[i][(31-i):0], {i{1'b0}}};
       end
   endgenerate
   assign change = alufn & B[15];
@@ -38,15 +36,14 @@ module wt_s (A,B,C,alufn);
   csa #(.BITS(32)) ca11(s[0], c[0], s[1], s[5], c[5]);
   csa #(.BITS(32)) ca12(c[1], s[2], c[2], s[6], c[6]);
   csa #(.BITS(32)) ca13(c[3], s[3], s[4], s[7], c[7]);
-  csa #(.BITS(32)) ca14(c[4], s[5], c[5], s[8], c[8]);
+  csa #(.BITS(32)) ca14(c[4], s[5], AB[15], s[8], c[8]);
   csa #(.BITS(32)) ca15(s[6], c[6], s[7], s[9], c[9]);
-
   csa #(.BITS(32)) ca16(c[7], c[8], s[8], s[10], c[10]);
-  csa #(.BITS(32)) ca17(s[9], c[9], AB[15], s[11], c[11]);
-  csa #(.BITS(32)) ca18(s[10], c[10], s[11], s[12], c[12]);
-  csa #(.BITS(32)) ca19(c[11], s[12], c[12], s[13], c[13]);
+
+  csa #(.BITS(32)) ca17(s[9], c[9], s[10], s[11], c[11]);
+  csa #(.BITS(32)) ca18(c[5], c[10], {32{1'b0}}, s[12], c[12]);
+  csa #(.BITS(32)) ca19(c[11], s[11], s[12], s[13], c[13]);
   csa #(.BITS(32)) ca20(c[12], s[13], c[13], s[14], c[14]);
 
-  carry_lookahead_adder #(.WIDTH(16)) cla1(cin,s[14][15:0],partial[15:0],C[15:0],cout); 
-  carry_lookahead_adder #(.WIDTH(16)) cla2(cout,s[14][31:16],partial[31:16],C[31:16],cout1);
+  carry_lookahead_adder #(.WIDTH(32)) cla1(cin,s[14],partial,C,cout1); 
   endmodule

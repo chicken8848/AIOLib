@@ -28,6 +28,7 @@ initial begin
   reg1 = -36;
   reg2 = -36;
   #10
+  alufn = 1;
   reg1 = 36;
   reg2 = -36;
   #10
