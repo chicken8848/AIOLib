@@ -497,7 +497,7 @@ of $\sqrt{z}$ is $\sqrt{|z|}$. So the two square roots of $z$ are
 $\sqrt{z}$ and $-\sqrt{z}$.
 
 \subsection{Other Roots}
-Just as numbers have more than one square root, they have more thna
+Just as numbers have more than one square root, they have more than
 one 5th root, so if we take $\frac{\theta}{5}$, we can also take $\frac{\theta + 2\pi}{5}$,
 $\frac{\theta+4\pi}{5}$ and so on...
 
@@ -555,15 +555,15 @@ Everyone is familiar with the old trusty angle formulas
 You \textit{could} prove these formulas by doing some tedious algebra, but with complex numbers, the
 work becomes a lot less. We get it from the binomial theorem,
 \begin{align*}
-	cosn\theta + isinn\theta & = (cos\theta + isin\theta)^n                                                                                       \\
-	                         & = \binom{n}{0}(cos\theta)^n + i\binom{n}{1}(cos\theta)^{n-1}sin\theta - \binom{n}{2}(cos\theta)^{n-2}(sin\theta)^2
+	cosn\theta + isinn\theta & = (\cos\theta + i\sin\theta)^n                                                                                       \\
+	                         & = \binom{n}{0}(\cos\theta)^n + i\binom{n}{1}(cos\theta)^{n-1}\sin\theta - \binom{n}{2}(cos\theta)^{n-2}(sin\theta)^2
 \end{align*}
 And then just take real parts of both sides.
 \begin{gather*}
-	cosn\theta = (cos\theta)^n - \binom{n}{2} (cos\theta)^{n-2}(sin\theta)^2 + \cdots
+	\cos n\theta = (\cos\theta)^n - \binom{n}{2} (\cos\theta)^{n-2}(\sin\theta)^2 + \cdots
 \end{gather*}
 \section{Elementary Transcendental Functions}
-This section will discuss $e^x, log, sin, cos, tan,$ and so on... We will start with the exponential
+This section will discuss $e^x, \log, \sin, \cos, \tan,$ and so on... We will start with the exponential
 function, and see that all the others are just special cases of it.
 \subsection{Exponential}
 We can define the exponential function using the normal power series, as we do for over the reals,
@@ -591,10 +591,10 @@ convergent. So let's try now to calculate it,
 \end{align*}
 We realise that
 \begin{gather*}
-	1 - \frac{y^2}{2!} + \frac{y^4}{4!} + \cdots  = cosy \\
-	iy - \frac{iy^3}{3!} + \frac{iy^5}{5!} + \cdots = isiny
+	1 - \frac{y^2}{2!} + \frac{y^4}{4!} + \cdots  = \cos y \\
+	iy - \frac{iy^3}{3!} + \frac{iy^5}{5!} + \cdots = i\sin y
 \end{gather*}
-This brings us to Euler's identity, where $e^{iy} = cosy + isiny$. Which
+This brings us to Euler's identity, where $e^{iy} = \cos y + i\sin y$. Which
 allows us to work out the exponential for all complex $z$. Also it
 follows that,
 \begin{gather*}
@@ -604,39 +604,99 @@ follows that,
 	e^{2\pi i} = 1 \\
 	e^{2n\pi i} = 1, \text{ for } n \in \mathbb{Z}
 \end{gather*}
+We can also say that the exponential function is a homomorphism of groups. We know that
+\begin{gather*}
+	\exp(z_1 + z_2) = \exp(z_1)\exp(z_2) \\
+\end{gather*}
+Therefore, we see from algebra courses that this is just a homomorphism from the complex numbers under
+addition, to the complex numbers under multplication. $ \mathbb{C} \rightarrow
+	\mathbb{C}^\times $. Saying its a homomorphism just says that it turns addition into multiplication.
+We also notice that this exponential map is onto. So, provided that $r$ is non-zero,
+\begin{gather*}
+	r(\cos\theta + i \sin \theta ) = \exp(\log r + i \theta)
+\end{gather*}
+We can also ask what is the kernel? Where $	\exp(x + iy) = 1$?
+\begin{gather*}
+	\exp(x+iy) = \exp(x)(\cos y + i \sin y)
+\end{gather*}
+Thus we can see that $x = 0$, and $y$ has to be some multiple of $2\pi$.
+
+\noindent \\ \textbf{Note:} For the reals, we also get a map from the reals under addition to the
+reals under multiplication, $\mathbb{R} \rightarrow \mathbb{R}^\times$. Except this time, there's
+no kernel and the map is not unto. It is injective but surjective. Whereas the complex exponentials
+is surjective but not injective.
 \subsection{Logarithm}
 Solve: $e^{a + bi} = z$
 \begin{align*}
-	z      & = r(cos\theta + isin\theta) \\
-	a + bi & = logz                      \\
-	e^a    & = r                         \\
-	       & = |z|                       \\
-	a      & = log|z|, z \neq 0          \\
-	\theta & = arg(z)
+	z      & = r(\cos\theta + i\sin\theta) \\
+	a + bi & = \log z                      \\
+	e^a    & = r                           \\
+	       & = |z|                         \\
+	a      & = \log|z|, z \neq 0           \\
+	\theta & = \arg(z)
 \end{align*}
 The problem is that $arg(z)$ is not unique, so $\theta$ is only defined
-up to multiples of $2\pi$. $log(z)$ NOT unique, only defined up to multiples
+up to multiples of $2\pi$. $\log(z)$ NOT unique, only defined up to multiples
 of $2\pi i$.
 
 \noindent \\ We can also ask if,
 \begin{gather*}
-	z_1^{z_2} = exp(z_2 log(z_1))
+	z_1^{z_2} = \exp(z_2 \log(z_1))
 \end{gather*}
-Is well defined, since $log(z_1)$ is ambiguous, there are only 2 cases where this function is well
+Is well defined, since $\log(z_1)$ is ambiguous, there are only 2 cases where this function is well
 defined.
 \begin{enumerate}
-	\item $z_1 > 0$ and REAL, take the real part of $log(z_1)$
-	\item $z_2$ is an integer, $exp(nlog(z_1)) = exp(n2\pi i) = 1$
+	\item $z_1 > 0$ and REAL, take the real part of $\log(z_1)$
+	\item $z_2$ is an integer, $\exp(n\log(z_1)) = \exp(n2\pi i) = 1$
 \end{enumerate}
 \subsection{Trigonometric Functions}
 \begin{gather*}
-	e^{iz} = cosz + isinz \\
-	e^{-iz} = cosz - isinz \\
-	\frac{e^{iz}+e^{-iz}}{2} = cosz \\
-	\frac{e^{iz}-e^{-iz}}{2i} = sinz
+	e^{iz} = \cos z + i\sin z \\
+	e^{-iz} = \cos z - i\sin z \\
+	\frac{e^{iz}+e^{-iz}}{2} = \cos z \\
+	\frac{e^{iz}-e^{-iz}}{2i} = \sin z
 \end{gather*}
 An amazing unification of exponential functions and trigonometric functions. In
 real analysis, they seem so different. Over the complex numbers, they seem like
 almost the same function. All identities of trigonometric functions also follow
 from the exponential functions.
+
+\subsection{Applications of Trigonometric Functions}
+Suppose you want to solve a simple linear differential equation.
+\begin{gather*}
+	a \frac{d^2y}{dx^2} + b \frac{dy}{dx} + cy = 0 \\
+\end{gather*}
+If you've been to a real analysis course, you know you tend to be able to find the solution,
+\begin{gather*}
+	y = e^\alpha \cos \beta x
+\end{gather*}
+and its really a bit of a mess checking what $\alpha, \beta$ has to be for this to be a solution.
+With complex numbers this becomes a lot easier to solve, you just substitute in $y = e^{\lambda x}$.
+\begin{gather*}
+	a \lambda^2 e^{\lambda x} + b \lambda e^{\lambda x} + c e^{\lambda x} = 0 \\
+	a \lambda^2 + b \lambda + c = 0
+\end{gather*}
+So now $\lambda$ is given by the root of some quadratic equation. We get a much simpler form for the
+solution. As an example,
+\begin{gather*}
+	\frac{d^2y}{dx^2} + 2 \frac{dy}{dx} + 2y = 0 \\
+	\Rightarrow \lambda^2 + 2 \lambda + 2 = 0 \\
+	\Rightarrow \lambda = -1 \pm i \\
+	y = e^{(1+i)x}, e^{(i-1)x} \\
+	\Rightarrow y = e^x \cos x, e^x \sin x
+\end{gather*}
+Another way complex numbers make things simplier is if you're doing Fourier series. If you have a
+function that's periodic,
+\begin{gather*}
+	f(x) = f(2\pi + x) \\
+	\Rightarrow f(x) = \sum_{n > 0}a_n \sin (nx) + \sum_{n \geq 0}b_n \cos (nx)
+\end{gather*}
+Now if you use complex numbers you can very easily simplify this, because sin and cos can be written
+as exponentials.
+\begin{gather*}
+	f(x) = \sum_{n \in z}c_n e^{inx}
+\end{gather*}
+This makes computing the fourier series a lot easier and neater.
+
+\section{Complex Derivatives}
 \end{document}
