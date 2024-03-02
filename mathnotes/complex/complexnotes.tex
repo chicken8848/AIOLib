@@ -699,4 +699,60 @@ as exponentials.
 This makes computing the fourier series a lot easier and neater.
 
 \section{Complex Derivatives}
+We are not going to go straight into complex derivatives, but we are going to look at real derivatives
+of complex functions.
+\subsection{Real Derivatives of Complex Functions}
+Let's take $w = u + iv$ is a function of $z = x + iy$, where $u, v, x, y \in \mathbb{R}$. Such that
+$u, v$ are functions of $x,y$. First we need to write $u, v$ as a vector.
+\begin{gather*}
+	\begin{bmatrix}
+		u(x,y) \\
+		v(x,y)
+	\end{bmatrix}
+	=
+	\underbrace{
+		\begin{bmatrix}
+			u(x_0, y_0) \\
+			v(x_0, y_0)
+		\end{bmatrix}
+		+
+		\begin{bmatrix}
+			a & b \\
+			c & d
+		\end{bmatrix}
+		\begin{bmatrix}
+			x - x_0 \\
+			y - y_0
+		\end{bmatrix}
+	}_{\text{linear function}}
+	+ \epsilon
+\end{gather*}
+If you compare it with the real derivative, you see that it is much the same. Except that now we are
+doing it with two variables. Again, this error should be less than any linear function such that
+\begin{gather*}
+	\text{As } (x,y) \rightarrow (x_0,y_0)\\
+	\frac{|\epsilon|}{\text{dist}(x,y),(x_0,y_0)} \rightarrow 0
+\end{gather*}
+Saying that $w$ is differentiable at the point $z_0$ just means that we can approximate the function
+$w$ by this linear function with a small error term, $\epsilon$. The matrix,
+\begin{gather*}
+	\begin{bmatrix}
+		a & b \\
+		c & d
+	\end{bmatrix}
+	\begin{bmatrix}
+		x - x_0 \\
+		y - y_0
+	\end{bmatrix}
+\end{gather*}
+can also be written as the partial derivates,
+\begin{gather*}
+	\begin{bmatrix}
+		\frac{\delta u}{\delta x} & \frac{\delta u}{\delta y} \\
+		\frac{\delta v}{\delta x} & \frac{\delta v}{\delta y}
+	\end{bmatrix}
+\end{gather*}
+So far we haven't done anything in complex analysis, all we have done is discussed a function from the
+real plane to the real plane, and discussed whether its differentiable. What we have defined here
+is just real differentiability.
 \end{document}
