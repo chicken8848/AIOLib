@@ -740,10 +740,6 @@ $w$ by this linear function with a small error term, $\epsilon$. The matrix,
 		a & b \\
 		c & d
 	\end{bmatrix}
-	\begin{bmatrix}
-		x - x_0 \\
-		y - y_0
-	\end{bmatrix}
 \end{gather*}
 can also be written as the partial derivates,
 \begin{gather*}
@@ -755,4 +751,149 @@ can also be written as the partial derivates,
 So far we haven't done anything in complex analysis, all we have done is discussed a function from the
 real plane to the real plane, and discussed whether its differentiable. What we have defined here
 is just real differentiability.
+\subsection{Complex Derivatives}
+Now we want to define a complex derivative. With the same $w = u + iv$ which is a function of
+$z = x + iy$, where $u, v, x, y \in \mathbb{R}$. But now we have to take the complex plane into
+account.
+\begin{gather*}
+	w(z) = w(z_0) + A(z-z_0) + \epsilon
+\end{gather*}
+Here $A$ is a complex number, and since $(z - z_0)$ is the matrix
+$
+	\begin{bsmallmatrix}
+		x - x_0 \\
+		y - y_0
+	\end{bsmallmatrix}
+$, then A would have to be
+$
+	\begin{bsmallmatrix}
+		\Re(A) & -\Im(A) \\
+		\Im(A) & \Re(A)
+	\end{bsmallmatrix}
+$. This matrix is the representation of:
+\begin{gather*}
+	A(x + iy) = \Re(A) \cdot x - \Im (A) \cdot y + i (\Im(A)\cdot x + \Re(A) \cdot y)
+\end{gather*}
+Now if we compare this matrix $A$ with the partial derivates from the real derivates, we see that,
+\begin{gather*}
+	A =
+	\begin{bmatrix}
+		\frac{\delta u}{\delta x} & \frac{\delta u}{\delta y} \\
+		\frac{\delta v}{\delta x} & \frac{\delta v}{\delta y}
+	\end{bmatrix}
+	=
+	\begin{bsmallmatrix}
+		\Re(A) & -\Im(A) \\
+		\Im(A) & \Re(A)
+	\end{bsmallmatrix}
+\end{gather*}
+So for $w$ to be differentiable as a complex function, this equality must hold. The \textbf{Cauchy Riemann}
+Equations say that the necessary and sufficient condition for any real differentiable function
+to be complex differentiable, is as follows
+\begin{gather*}
+	\frac{\delta u}{\delta x} = \frac{\delta v}{\delta y} \\
+	\frac{\delta v}{\delta x} = -\frac{\delta u}{\delta y}
+\end{gather*}
+We can also express $A$ in terms of a limit,
+\begin{gather*}
+	A = \lim_{dz \rightarrow 0} \frac{dw}{dz}
+\end{gather*}
+where,
+\begin{gather*}
+	dw = w(z) - w(z_0) \\
+	dz = z - z_0
+\end{gather*}
+\subsection{Holomorphic}
+Suppose $w$ is a complex function of $z$, where $z \in U$, for some open set $U \in \mathbb{C}$. Then
+$w$ is called \textbf{HOLOMORPHIC} if it has a complex derivative everywhere on $U$. You'll sometimes
+see the word \textit{analytic} used instead, however this means that it has a power series expansion
+that converges at each point. What we will prove later that for complex functions, they are holomorphic
+on an open region if and only if they have a convergent power series expansion at every point.
+
+\subsection{Wertinger Derivatives}
+We can also define the partial derivatives with respect to $z$ and $\overline{z}$.
+\begin{gather*}
+	\frac{\delta}{\delta z} = \frac{1}{2}(\frac{\delta}{\delta x} - i\frac{\delta}{\delta y}) \\
+	\frac{\delta}{\delta \overline{z}} = \frac{1}{2}(\frac{\delta}{\delta x} + i \frac{\delta}{\delta y})
+\end{gather*}
+The reason we define it like this is because they give the following results
+\begin{gather*}
+	\frac{\delta}{\delta z } z = 1 \\
+	\frac{\delta}{\delta z } \overline{z} = 0 \\
+	\frac{\delta}{\delta \overline{z} } z = 0 \\
+	\frac{\delta}{\delta \overline{z} } \overline{z} = 1
+\end{gather*}
+Which is what we expect from the derivatives of $z$ and $\overline{z}$. So now we can write the
+Cauchy Riemann equations,
+\begin{gather*}
+	\frac{\delta w}{\delta \overline{z}} = 0
+	\begin{cases}
+		\frac{\delta u}{\delta x} = \frac{\delta v }{\delta y} \\
+		\frac{\delta u}{\delta y} = -\frac{\delta v}{\delta x}
+	\end{cases}
+\end{gather*}
+This suggests that holomorphic means depends on $z$ but not $\overline{z}$.
+\subsection{Examples Of Holomorphic Functions}
+The obvious linear functions,
+\begin{gather*}
+	1, z
+\end{gather*}
+For any $f, g$ that are holomorphic on $U \in \mathbb{C}$,
+\begin{gather*}
+	f+g, f-g, fg, f/g, f(g(z))
+\end{gather*}
+is also holomorphic, the proof is the same as the one in real analysis.
+
+\noindent \\ For any convergent power series where $|z| < k$ for some constant $k$.
+\begin{gather*}
+	a_o + a_1 z + a_2 z^2 + \cdots
+\end{gather*}
+The proof is very similar to the proof in a real analysis. This means that
+\begin{gather*}
+	\sin, \cos, \tan, \exp, \log
+\end{gather*}
+are all differentiable. (when they are defined of course)
+
+\noindent \\ If $f$ is holomorphic, then $\frac{df}{dz}$ is also holomorphic. Which is totally false
+for real variables.
+
+\subsection{Examples Of Non-Holomorphic Functions}
+The following are not holomorphic and can be easily verified by checking the Cauchy Riemann equations.
+\begin{gather*}
+	\Re(z), \Im(z), |z|, |z|^2 = z\overline{z}, \overline{z}
+\end{gather*}
+
+\section{Harmonic Functions}
+Given the complex function $w = u + i v$ of a complex variable $z = x + i y$, where $u,v,x,y \in
+	\mathbb{R}$ and $w,z \in \mathbb{C}$. Suppose we are given the function $U(x,y)$, can we find a
+holomorphic function $w$ so that $u$ is the $\Re(w)$? Following the Cauchy Riemann equations,
+\begin{gather*}
+	\frac{\delta u}{\delta x} = \frac{\delta v}{\delta y} \\
+	\frac{\delta u}{\delta y} = -\frac{\delta v}{\delta x} \\
+	\Rightarrow \frac{\delta^2 u}{\delta x^2} = \frac{\delta^2 v}{\delta x \delta y}
+	= -\frac{\delta^2 u}{\delta y^2}
+\end{gather*}
+This presents the non-trivial condition that
+\begin{gather*}
+	\frac{\delta^2 u}{\delta x^2} + \frac{\delta^2 u}{\delta y^2} = 0
+\end{gather*}
+This is the most basic of all partial differentiable equations called the Laplace equation. Functions
+that satisfy this equation are called harmonic equations. This has a physical interpretation, it gives
+you the steady state heat of some planar region, if you fix the temperature on the boundaries, the steady
+state of the object would satisfy the Laplace equation. It is also usually written as the Laplace
+operator, $\Delta = \frac{\delta^2}{\delta x^2} + \frac{\delta^2}{\delta y^2}$. So the Laplace equation
+above just says that $\Delta U = 0$.
+
+\noindent \\ \textbf{Example:} Find all harmonic polynomials in $x,y$. So we want to solve $\Delta f = 0$
+where $f$ is just a polynomial. We can just take polynomials in $z$ which are holomorphic, and use
+their real and imaginary parts.
+\begin{center}
+	\begin{tabular}{c | c c c c c}
+		$f$      & 1 & $z$ & $z^2$     & $z^3$       & $\cdots$ \\
+		$\Re(f)$ & 1 & $x$ & $x^2-y^2$ & $x^3-3xy^2$ & $\cdots$ \\
+		$\Im(f)$ & 0 & $y$ & $2xy$     & $3x^2y-y^3$ & $\cdots$ \\
+	\end{tabular}
+\end{center}
+Any linear combination of these polynamials is also harmonic. These form a basis of all harmonic
+polynomials.
 \end{document}

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1709392759 "complexnotes.tex" "complexnotes.pdf" "complexnotes" 1709392760 0
+["pdflatex"] 1709544529 "complexnotes.tex" "complexnotes.pdf" "complexnotes" 1709544530 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1704400182 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1704400182 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1704400182 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -181,9 +181,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1704400182 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1706145062 4482925 a1a254cacf5c7108f7b28226c8f3b19f ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1706145013 6768054 fc0e4cec90696dcdbe37fb416dbb04c9 ""
-  "complexnotes.aux" 1709392760 3077 68188c1b8daf7e22f925a454b48c4e41 "pdflatex"
-  "complexnotes.tex" 1709392758 30910 99e6131908356072b99ffc35ff28c6bd ""
-  "complexnotes.toc" 1709392760 1937 7e44819ee613476a6b516dc666a99dca "pdflatex"
+  "complexnotes.aux" 1709544530 3776 cbe7cb4ac08a7238fce77c4334757a4a "pdflatex"
+  "complexnotes.tex" 1709544528 36965 5ac0464c53d654b42792629a24f0314c ""
+  "complexnotes.toc" 1709544530 2390 a9d78e3bc8053145b944b36e930e9a51 "pdflatex"
   (generated)
   "complexnotes.aux"
   "complexnotes.log"

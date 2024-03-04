@@ -599,9 +599,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-OUTPUT complexnotes.toc
 OUTPUT complexnotes.pdf
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+OUTPUT complexnotes.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT .//diagrams/mandelbrot.jpg
 INPUT .//diagrams/mandelbrot.jpg
