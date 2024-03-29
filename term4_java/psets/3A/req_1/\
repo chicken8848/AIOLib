@@ -1,0 +1,20 @@
+// NOT NECESSARY TO EDIT THIS FILE 
+public interface AnimalFactory {
+    Animal createAnimal( String type, String name){
+        switch (type) {
+            case "Cat": 
+                new Cat(name);
+                break;
+            case "Dog":
+                  new Dog(name);
+break;
+case: "Cow":
+      new Cow(name);
+      break;
+default:
+      return null;
+
+        }
+    };
+
+}

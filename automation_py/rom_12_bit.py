@@ -91,4 +91,4 @@ def generate(name, rem_x=-1, rem_y=-1):
     rom_12_bit(name, im)
 
 # generate rom from full bitmap image
-generate("yoshi.bmp")
+generate("../../../Downloads/c071ad4e0506276(1).bmp")
