@@ -20,15 +20,12 @@ public class Zoo {
   }
 
   public String performConcert() {
-    // TODO Complete this method
-    if (this.animalList.size() > 0) {
-      String out = this.animalList.get(0).makeSound();
-      for (int i = 1; i < this.animalList.size(); i++) {
-        out = String.join("*", out, this.animalList.get(i).makeSound());
-      }
-      return out;
+    StringBuilder concert = new StringBuilder();
+    for (Animal animal : animalList) {
+      concert.append(animal.makeSound()).append("*");
     }
-    return "";
+    // TODO Complete this method
+    return concert.toString();
   }
 
   @Override
