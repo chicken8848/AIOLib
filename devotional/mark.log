@@ -1,41 +1,42 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.12.20)  2 JAN 2024 19:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.3.23)  4 APR 2024 22:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **mark.tex
 (./mark.tex
-LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2023-02-22> (/usr/share/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count185
-\c@section=\count186
-\c@subsection=\count187
-\c@subsubsection=\count188
-\c@paragraph=\count189
-\c@subparagraph=\count190
-\c@figure=\count191
-\c@table=\count192
+\c@part=\count188
+\c@section=\count189
+\c@subsection=\count190
+\c@subsubsection=\count191
+\c@paragraph=\count192
+\c@subparagraph=\count193
+\c@figure=\count194
+\c@table=\count195
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
 ) (/usr/share/texmf-dist/tex/latex/verse/verse.sty
-Package: verse 2009/09/04 v2.4a verse typesetting
-\c@vslineno=\count193
-\c@poemline=\count194
-\c@fvsline=\count195
-\c@modulo@vs=\count196
-\c@verse@envctr=\count197
+Package: verse 2014/05/10 v2.4b verse typesetting
+\c@vslineno=\count196
+\c@poemline=\count197
+\c@fvsline=\count198
+\c@modulo@vs=\count199
+\c@verse@envctr=\count266
 \versewidth=\skip50
 \vgap=\skip51
 \vindent=\skip52
 \stanzaskip=\skip53
 \vleftskip=\skip54
 \vrightskip=\skip55
-\c@chrsinstr=\count198
+\c@chrsinstr=\count267
 \beforepoemtitleskip=\skip56
 \afterpoemtitleskip=\skip57
 ) (/usr/share/texmf-dist/tex/latex/bibleref/bibleref.sty
@@ -47,51 +48,51 @@ Package: fmtcount 2020/01/30 v3.07
  (/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks16
-\XKV@tempa@toks=\toks17
+\XKV@toks=\toks17
+\XKV@tempa@toks=\toks18
  (/usr/share/texmf-dist/tex/generic/xkeyval/keyval.tex))
-\XKV@depth=\count199
+\XKV@depth=\count268
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count266
+\etb@tempcnta=\count269
 ) (/usr/share/texmf-dist/tex/latex/fmtcount/fcprefix.sty
 Package: fcprefix 2012/09/28
  (/usr/share/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
 Package: fcnumparser 2017/06/15
-\fc@digit@counter=\count267
+\fc@digit@counter=\count270
 )) (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks18
+\@emptytoks=\toks19
 \ex@=\dimen141
 )
-\c@padzeroesN=\count268
-\fc@tmpcatcode=\count269
-\@DT@modctr=\count270
-\@ordinalctr=\count271
-\@orgargctr=\count272
-\@strctr=\count273
-\@tmpstrctr=\count274
-\@DT@loopN=\count275
-\@DT@X=\count276
+\c@padzeroesN=\count271
+\fc@tmpcatcode=\count272
+\@DT@modctr=\count273
+\@ordinalctr=\count274
+\@orgargctr=\count275
+\@strctr=\count276
+\@tmpstrctr=\count277
+\@DT@loopN=\count278
+\@DT@X=\count279
 ) (/usr/share/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
  (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\@bv@tmpa=\toks19
-\@bv@tmpb=\toks20
+\@bv@tmpa=\toks20
+\@bv@tmpb=\toks21
 ) (/usr/share/texmf-dist/tex/latex/frankenstein/attrib.sty
 Package: attrib 2001/08/31 v1.3 attribution of block elements (Frankenstein's hat)
  (/usr/share/texmf-dist/tex/latex/frankenstein/moredefs.sty
 Package: moredefs 2001/08/31 v1.8 more defining commands (Frankenstein's brain)
-\sc@toks@a=\toks21
-\sc@toks@b=\toks22
+\sc@toks@a=\toks22
+\sc@toks@b=\toks23
 )
 \AttribMinSkip=\skip58
 ) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count277
+File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count280
 \l__pdf_internal_box=\box51
 ) (./mark.aux)
 \openout1 = `mark.aux'.
@@ -125,20 +126,25 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 28.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] (./mark.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] (./mark.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+ ***********
+ ) 
 Here is how much of TeX's memory you used:
- 2348 strings out of 477985
- 36197 string characters out of 5840057
- 1858388 words of memory out of 5000000
- 22562 multiletter control sequences out of 15000+600000
- 516542 words of font info for 46 fonts, out of 8000000 for 9000
+ 2326 strings out of 476076
+ 34966 string characters out of 5793775
+ 1934187 words of memory out of 5000000
+ 24447 multiletter control sequences out of 15000+600000
+ 562324 words of font info for 50 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,6n,76p,547b,248s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,6n,79p,547b,252s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb>
-Output written on mark.pdf (14 pages, 119362 bytes).
+Output written on mark.pdf (17 pages, 126553 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
