@@ -904,4 +904,50 @@ Hence we've shown that the real part of any holomorphic function must be harmoni
 ask us to consider, is any harmonic function $u$, the real part of some holomorphic function $w = u
 	+ iv$? We will see that it depends on the connected open set $U \subset \mathbb{C}$ on which the
 function $u$ lies.
+
+\section{Integration}
+In real analysis, we can integrate from $a$ to $b$ some real valued function,
+\begin{gather*}
+	\int_{a}^{b} f(x) dx
+\end{gather*}
+if $f$ is continuous. And we want to find something similar for the complex variables. We might
+want to define some function $f$,
+\begin{gather*}
+	\int_{a}^{b} f(z) dz
+\end{gather*}
+where $a, b, z, \in \mathbb{C}$, and $f$ is holomorphic. The problem being that we can not simply
+integrate complex variables as easily as we do with real variables, as they are path dependent. A
+more accurate definition of the integral of complex variables would be,
+\begin{gather*}
+	\int_{C}f(z)dz
+\end{gather*}
+Where $C$ is a path from $a$ to $b$. Given by the function,
+\begin{gather*}
+	\rho : \mathbb{R} \rightarrow \mathbb{C}
+\end{gather*}
+Of which $\rho(r) = a$ and $ \rho(s) = b$ for some $r, s \in \mathbb{R}$. Then if $\rho$ has a continuous
+derivative,
+\begin{gather*}
+	z = p(x) \\
+	dz = p'(x)dx \\
+	\Rightarrow \int_{C}f(z)dz = \int_r^s f(p(x))p'(x)dx
+\end{gather*}
+If the path doesn't have a continuous derivative, it is quite common to split the path up to a finite number of
+pieces and find out each integral individually and sum them up. Another way to look at it is in its form of vectors.
+For some $f = u + iv$ and $z = x + iy$,
+\begin{gather*}
+	\int_C f(z)dz = \int_C (u + iv) (dx + idy) \\
+	= \int_C udx - vdy + i \int_C vdx + udy
+\end{gather*}
+This integral is almost always independent of parameterization, except for its direction. Other basic properties
+of integrals that are very much like real integrals.
+\begin{gather*}
+	\int_{C_1} f(z)dz + \int_{C_2} f(z)dz = \int_{C_1 \cup C_2} f(z)dz \\
+	\int_C (f + g) dz = \int_C f dz + \int_C g dz
+\end{gather*}
+And a little less obvious property
+\begin{gather*}
+	|\int_C f(z) dz | \leq M|C|
+\end{gather*}
+Where $|C|$ is the length of $C$ and $M$ is the upper bound of $|f|$.
 \end{document}
